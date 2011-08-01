@@ -1,0 +1,1082 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:og="http://opengraphprotocol.org/schema/"
+     xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex">
+<title>ad05dae6ffb78e2ab2e20e347b9ecb53.png</title>
+<meta name="viewport" content="width=380" />
+<meta name="description" content="Gyazo lets you instantly grab the screen and upload the image to the web. You can easily share them on Chat, Twitter, Blog, Tumblr, etc. Available for Windows, Mac and Linux.">
+<meta name="keywords" content="Screenshot, Gyazo, Upload, Print Screen,  Tool,  Free">
+
+<meta property="og:title" content="ad05dae6ffb78e2ab2e20e347b9ecb53.png"/>
+<meta property="og:type" content="image"/>
+<meta property="og:url" content="http://gyazo.com/ad05dae6ffb78e2ab2e20e347b9ecb53.png"/>
+<meta property="og:image" content="http://gyazo.com/ad05dae6ffb78e2ab2e20e347b9ecb53.png"/>
+<meta property="fb:page_id" content="227979433880197" />
+<meta property="og:site_name" content="Gyazo"/>
+<meta property="og:description"
+	  content="Gyazo lets you instantly grab the screen and upload the image to the web."/>
+
+<style type="text/css">
+body {
+	font-family:lucida Grande,verdana,arial,sans-serif;
+	margin:0px;
+}
+img {
+	border: none;
+}
+
+h2 {
+	font-size:11px;
+	font-weight:normal;
+	margin:7px 0 6px;
+	float:left;
+}
+
+#noticebar {
+	background-image:url(http://gyazo.com/bab04ba53fb1bd4f2c7cfcfad1f50d61.png);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	bckground-color:#E5EDF8;
+	font-size:13px;
+	color:#333;
+	padding:10px 15px;
+	border-bottom:1px solid #8DA0C2;	
+}
+
+#noticebar .close{
+	float:right;
+	padding-top:2px;
+}
+
+#applogo {
+	display: block;
+	float: left;
+	font-size: 1.1em;
+	margin:0px 1em 0px 8px;
+	font-family: Garamond,Georgia,serif;
+}
+#applogo a {
+	color: #000;
+	text-decoration: none;
+}
+#applogo img {
+	border:0;
+	max-height:24px;
+
+}
+
+#uploading{
+	display:none;
+	margin-top:55px;
+	margin-left:20px;
+	font-size:25px;
+	color:#707070;
+	border:1px solid #999999;
+	-moz-border-radius:10px;
+	padding:20px 18px;
+	width:270px;
+}
+#uploading img{
+	margin-right:8px;
+}
+
+#header {
+	position:fixed;
+	top:0;
+	left:0;
+	height:32px;
+	padding:0px;
+	background-color:#E5EDFF;
+	color:#253C6D;
+	width: 100%;
+/*	background-image:url(http://gyazo.com/7c2616426d20dbbdbb2a05c3c10543ed.png);
+	background-position:top left;*/
+}
+#header:hover{
+/*	background-color:white;*/
+}
+#header a{
+	color:#253C6D;
+}
+
+#header {
+	*display: inline-block;
+}
+#header:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+
+#header .leftmenu {
+	float: left;
+	margin-right:5px;
+	margin-top:3px;
+	border-right:1px solid #CCCCCC;
+	padding-right:5px;
+	font-weight:bold;
+}
+
+#header .plus {
+	display:block;
+	float:left;
+	margin:0;
+	margin-top: 3px;
+	font-weight: bold;
+}
+
+#header .ad {
+	display:block;
+	float:left;
+	margin:0;
+	line-height: 32px;
+	font-size: 75%;
+	margin-left: 10px;
+}
+
+#header .btnbox {
+}
+#header .btnbox a {
+	font-size:75%;
+	text-decoration: none;
+	display:block;
+	border:1px solid transparent;
+	padding:4px;
+	height:16px;
+	line-height:16px;
+	overflow:hidden;
+	
+}
+#header .btnbox a:hover {
+	background-color:#E4ECF7;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid #9DB6D0;
+	border-right: 1px solid #9DB6D0;
+}
+#header .btnbox img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#header #menu {
+	float:left;
+	margin-top:3px;
+	border-right:1px solid #CCCCCC;
+	margin: 3px 7px 0 0;
+	padding: 0 5px 0 0;
+}
+
+#header #submenu{
+	float:right;
+	font-size:11px;
+	margin-top:7px;
+	
+}
+#header #close_btn {
+	margin-left:8px;
+	cursor:pointer;
+}
+#header .close {
+	float:right;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:8px;
+}
+
+
+#header .toolbtn {
+	border:1px solid transparent;
+	font-size::0.8em;
+	display:block;
+	padding:4px;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	background-repeat:no-repeat;
+	background-position:4px center;
+
+	cursor:pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select:none;
+
+}
+
+#header .toolbtn img{
+	margin-right:2px;
+	border:0;
+}
+
+#header .toolbtn:hover {
+	background-color:#E4ECF7;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid #9DB6D0;
+	border-right: 1px solid #9DB6D0;
+}
+
+#header .selected .toolbtn {
+/*	background-color:#CEE0F2;*/
+	background-color:#E4ECF7;
+	border-top: 1px solid #9DB6D0;
+	border-left: 1px solid #9DB6D0;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+
+}
+
+#header .label{
+	padding:5px 0;
+	display:block;
+}
+
+#header .urlinfo {
+	display:block;
+	padding: 3px 0 3px 18px;
+}
+#header .urlinfo input{
+	border: 1px solid #999;
+	width:200px;
+	font-size:10px;
+	padding:1px;
+	margin:0px;
+}
+
+
+#header li {
+	font-size:11px;
+	float: left;
+	list-style-type: none;
+/*	margin-right: 1em;*/
+}
+
+
+#header .forguest{
+    display:block;
+    font-size:12px;
+    color:#253C6D;
+    text-decoration:none;
+    cursor:pointer;
+    padding-top:6px;
+    padding-left:5px;
+    height:26px;
+    float:left;
+}
+#header .forguest:hover{
+    background-color:#D0DEFE;
+}
+
+#header .forguest .dlbtn{
+    display:block;
+    float:left;
+    background:url(/public/img/dlbtn_y.png) no-repeat;
+    width:87px;
+    padding-left:20px;
+    height:21px;
+    line-height:21px;
+}
+
+
+
+#content{
+	margin-top:38px;
+}
+
+
+#gyazo {
+	margin:8px;
+	min-height: 300px;
+}
+
+#buttons {
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 0;
+}
+
+#buttons li {
+	list-style:none;
+	float:left;
+	margin-right: 15px;
+}
+
+.ads {
+	clear: both;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.ads div {
+	text-align: left;
+}
+
+#image_header  p{
+	margin-left:8px;
+	margin-top:15px;
+}
+
+#image_header  .private{
+	color:red;
+	font-size:13px;
+	background-color:#EFCACC;
+	padding:2px;
+}
+
+
+#dialog_frame{
+	display:none;
+	padding:3px;
+	background-color : #C3D9FF;
+}
+#dialog_back{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:200;
+}
+#dialog_border{
+	display:none;
+	padding:3px;
+	background-color : #999;
+}
+
+
+
+.dialog {
+	position:absolute;
+	background-color:#16306F;
+/*	-moz-border-radius:10px;*/
+	color:black;
+	padding:7px 10px 10px;
+	top:50px;
+	left:64px;
+	-moz-box-shadow:0 3px 8px #666666;
+	-webkit-box-shadow:0 3px 8px #666666;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	z-index:100;
+}
+
+.dialog h1{
+	color:#69645C;
+	margin:0 0 12px;
+}
+
+
+.dialog h4{
+	color:white;
+	margin: 0 0 7px;
+	font-size:15px;
+}
+
+.dialog .success{
+	font-size:14px;
+	background-color:white;
+	padding:15px 18px;
+}
+
+.dialog form{
+	background-color:white;
+	margin:0;
+}
+
+.dialog .postbody{
+	padding:15px 18px;
+}
+
+.dialog p{
+	font-size:12px;
+}
+
+.dialog .submit{
+	padding:8px 18px;
+	background-color:#0096B5;	
+	text-align:center;
+}
+.dialog .submit input{
+    font-size:12px;
+}
+
+.dialog .row input, .dialog .row textarea{
+	background-color:#F6F6F6;
+	border:1px solid #999;
+	padding:3px;
+	margin:0;
+	width:200px;
+	
+}
+.dialog .row textarea{
+    height:3.1em;
+}
+
+.dialog .row{
+	margin-bottom:8px;
+	margin-right:5px;
+}
+.dialog .row label{
+	display:block;
+	font-size:12px;
+	margin:3px 0;
+}
+
+.dialog .nt{
+	display:block;
+	font-size:13px;
+	color:gray;
+}
+
+.dialog .row_info label{
+	font-size:10px;
+	color:gray;
+}
+.dialog .row_info input{
+	font-size:10px;
+	border:1px solid #EEE;
+	color:gray;
+}
+
+
+.dialog .error{
+	font-size:12px;
+	background:#FFEBE8 none repeat scroll 0 0;
+	border:1px solid #DD3C10;
+	color:#333333;
+	padding:5px;
+	margin-bottom:10px;
+	width:18em;
+}
+
+.dialog .buttons{
+	font-size:12px;
+	margin-top:10px;
+}
+.dialog .buttons label{
+	font-size:12px;
+}
+
+#tags, #uploads{
+	margin-top:4px;
+	margin-left:8px;
+	*display: inline-block;
+}
+
+
+.addastag, .deleteastag{
+	color:white !important;
+	display:block !important;
+	font-size:0.9em !important;
+	height:18px !important;
+	width:18px !important;
+	line-height:1em !important;
+	position:absolute !important;
+	text-align:center !important;
+	top:-19px !important;
+	vertical-align:middle !important;
+	background-color: #222;
+	border-top:1px #444 solid;
+	border-right:1px #444 solid;
+}
+.related a:hover, #history a:hover{
+	color:white !important;
+	//background-color:#0063DC;
+	background: #444;
+}
+
+.related img, #history img{
+	max-height:90px;
+	max-width:90px;
+}
+
+
+#content h3{
+	display:block;
+	margin-top:20px;
+	margin-bottom:4px;
+	font-weight:normal;
+	font-size:18px;
+	color:#FF0084;
+}
+h3  a {
+	color:#FF0084 !important;
+}
+h3  img {
+	max-height:24px;
+}
+
+#related_pics{
+	margin:8px;
+/*	margin-top:20px;*/
+	padding:1px 0px;
+/*	border-top:2px dotted gray;
+	background-color:#EFEFEF;*/
+	*display: inline-block;
+}
+
+
+#related_pics:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+
+
+
+#related_tags{
+	clear:both;
+/*	margin-top:20px;*/
+	margin-left:8px;
+	*display: inline-block;
+}
+#related_tags:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+
+
+
+
+
+#actions {
+	font-size:11px;
+	padding: 0px;
+	margin: 3px 0 0;
+}
+/*
+#actions li {
+	color: white;
+	list-style-type: none;
+	margin-right: 5px;
+}
+*/
+
+#actions li.star {
+	background-position: 2px 2px;
+	background-image: url(/public/img/history/simple_icons.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#actions li.stared {
+	background-position: -21px 2px;
+	visibility:visible;
+}
+
+#actions .delete_icon {
+	display:inline-block;
+	cursor: pointer;
+	background-image: url(/public/img/history/simple_icons.png);
+	background-repeat: no-repeat;
+	background-position: -44px 2px;
+}
+#actions .delete_icon:hover {
+	background-position: -68.5px 2px;
+}
+
+#upgrade {
+	cursor: pointer;
+	padding: 2px;
+	color: black !important;
+}
+#upgrade:hover {
+	padding: 1px;
+}
+
+#footer {
+	clear:both;
+	color:gray;
+	font-size:0.8em;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:40px;
+	padding-bottom:31px;
+	padding-left:7px;
+	padding-top:10px;
+}
+
+.prefix{
+	*display:inline-block;
+}
+
+.prefix:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 10%;
+	line-height: 0;
+	clear: both;
+}</style>
+
+        
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2827501-10']);
+      _gaq.push(['_setDomainName', '.gyazo.com']);
+      _gaq.push(['_trackPageview']);
+        _gaq.push(['_setCustomVar',
+      1,             // This custom var is set to slot #1.  Required parameter.
+      'User Type',   // The name of the custom variable.  Required parameter.
+      'Guest',      // Sets the value of "User Type" to "Member" or "Visitor" depending on status.  Required parameter.
+       2             // Sets the scope to session-level.  Optional parameter.
+    ]);
+          (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    
+	<script type="text/javascript">
+	var _sf_async_config={uid:24838,domain:"gyazo.com"};
+	(function(){
+	  function loadChartbeat() {
+	    window._sf_endpt=(new Date()).getTime();
+	    var e = document.createElement('script');
+	    e.setAttribute('language', 'javascript');
+	    e.setAttribute('type', 'text/javascript');
+	    e.setAttribute('src',
+	       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+	       "js/chartbeat.js");
+	    document.body.appendChild(e);
+	  }
+	  var oldonload = window.onload;
+	  window.onload = (typeof window.onload != 'function') ?
+	     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	})();
+
+	</script>
+    
+<!-- DFP Standard -->
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-0955726434095010");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-0955726434095010", "Gyazo_Bottom");
+</script>
+
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-0955726434095010");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-0955726434095010", "Gyazo_Toolbar");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+</head>
+
+<body>
+
+<div id="header" style="display: block;">
+
+                
+        <a class="forguest" href="/?ref=bar2">
+            <div style="float:left;margin:1px 6px 0 4px;">
+            <img src="/public/img/logo_s.png" width="51">
+            </div>
+            <div style="float:left;height:21px;line-height:21px;margin-right:10px;">
+            Instant Screen Sharing.            </div>
+                        <div class="dlbtn">
+            Try Now            </div>
+                    </a>
+
+        
+    </div>
+
+
+<!-- About Dialog -->
+<div id="about" style="display:none;" class="dialog">
+	<h4><img align="absmiddle" src="/public/img/info.png"/> Info</h4>
+
+	<form name="postflickr" id="" action="/" method="GET" target="_blank">
+		<div class="postbody">
+		<div class="row">
+			<label for="embed">Image URL</label>
+			<input type="text" value="http://gyazo.com/ad05dae6ffb78e2ab2e20e347b9ecb53.png" size="26" onfocus="copyEmbed()" id="embed">
+		</div>
+		
+		<p style="width:210px;">
+				You can paste and share this URL anywhere. The URL is copied to the clipboard automatically when uploaded.
+				</p>
+
+		</div>
+		<div class="submit">
+			<input type="submit" value="Visit Gyazo.com">
+			<input type="button" value="Cancel" onclick="toggleAbout()">
+		</div>
+	</form>
+</div>
+
+<!-- Version Up Dialog -->
+
+<!-- Gyazo Pro Dialog -->
+
+<div id="content">
+	<div id="gyazo">
+				<div class="ads">
+                                  <script type="text/javascript"><!--
+                                       google_ad_client = "ca-pub-0955726434095010";
+                    /* Gyazo Page Top */
+                    google_ad_slot = "7322977933";
+                    google_ad_width = 728;
+                    google_ad_height = 90;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+               		</div>
+				<img src="/ad05dae6ffb78e2ab2e20e347b9ecb53.png" id="gyazo_img" />
+		<ul id="buttons" class="prefix">
+			<li style="margin-right:0;">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Screenshot:">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			</li>
+			<li>
+				<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=176828049042806&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="100" show_faces="false" font=""></fb:like>
+			</li>
+					</ul>
+				<div class="ads">
+			                                    <script type="text/javascript"><!--
+                                        google_ad_client = "pub-0955726434095010";
+                    /* Gyazo Page Bottom */
+                    google_ad_slot = "7963836501";
+                    google_ad_width = 728;
+                    google_ad_height = 90;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                					</div>
+			</div>
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+	var isPremium = 0;
+	var image_id = 'ad05dae6ffb78e2ab2e20e347b9ecb53';
+	var messages = {
+		"delete_premium": "You need to be a Pro user to delete images.\nDo you want to see the details?",
+		"delete_alert" : "Are you sure to delete the selected image?\nThere is NO undo!",
+		"delete_fail": "Failed to delete.",
+		"server_error" : "Can not connect to servers. Please reload this page and try again."
+	}
+</script>
+<script type="text/javascript" charset="utf-8">
+function log(obj){
+	try{
+		console.log(obj);
+	}catch(e){}
+}
+
+var Cookie = {
+	set: function(name,value,seconds){
+		if(seconds){
+			d = new Date();
+			d.setTime(d.getTime() + (seconds * 1000));
+			expiry = '; expires=' + d.toGMTString();
+		}else
+			expiry = '';
+		document.cookie = name + "=" + value + expiry + "; path=/";
+	},
+	get: function(name){
+		nameEQ = name + "=";
+		ca = document.cookie.split(';');
+		for(i = 0; i < ca.length; i++){
+			c = ca[i];
+			while(c.charAt(0) == ' ')
+				c = c.substring(1,c.length);
+			if(c.indexOf(nameEQ) == 0)
+				return c.substring(nameEQ.length,c.length);
+		}
+		return null
+	},
+	unset: function(name){
+		Cookie.set(name,'',-1, 60 * 60 * 24 * 30 * 365);
+	}
+}
+
+function toggleAbout(){
+	clear_selection("menu");
+	if($('#about').css('display')=='none'){
+		hideOther('about');
+		$('#about').show();
+		$('#about_btn').addClass('selected');
+		$('#embed').focus();
+	}else{
+		$('#about').hide();
+	}
+}
+
+function toggleVersionup(){
+	clear_selection("menu");
+	if($('#versionup').css('display')=='none'){
+		$('#versionup').show();
+        $('#gyazo').css('opacity', "0.5");
+        $('#header').css('opacity', "0.5");
+	}else{
+		$('#versionup').hide();
+        $('#gyazo').css('opacity', "1");
+        $('#header').css('opacity',"1");
+	}
+}
+function toggleGyazopro(){
+	clear_selection("menu");
+	if($('#gyazopro').css('display')=='none'){
+		$('#gyazopro').show();
+        $('#gyazo').css('opacity', "0.5");
+        $('#header').css('opacity', "0.5");
+	}else{
+		$('#gyazopro').hide();
+        $('#gyazo').css('opacity', "1");
+        $('#header').css('opacity', "1");
+	}
+}
+function hideOther(name){
+	var names = 'twitter flickr about'.split(' ');
+	for(var i=0,l=names.length;i<l;i++){
+		if(names[i]!=name) $('#'+names[i]).hide();
+	}
+}
+
+function copyEmbed(){
+	$('#embed').select();
+//	var swf = "<embed src='/public/swf/setClipboard.swf' FlashVars='code="+encodeURIComponent($('embed').value)+"' width='0' height='0' type='application/x-shockwave-flash'></embed>";
+//	$('copy').innerHTML = swf;
+}
+
+function clear_selection(id){
+	$('#'+id).find("li").each(function(i, e){
+		e.className = "";
+	});
+}
+
+
+function show_dialog(){
+	$('#dialog_frame').show();
+	$('#image_header').hide();
+	//$('author_tag').focus();
+}
+
+function close_dialog(){
+	clear_selection("menu");
+	hideOther('');
+}
+
+function set_tag(tag){
+	$('#public_tags')[0].value += tag + ' ';
+}
+
+
+
+function hide_header(){
+	$('#header').hide();
+}
+
+
+function toggleSize(){
+	if($('#gyazo_img')[0].style.maxHeight != '600px'){
+		$('#gyazo_img')[0].style.maxHeight = '600px';
+	}else{
+		$('#gyazo_img')[0].style.maxHeight = '400px';
+	}
+}
+
+function hideNotice(){
+	$('#noticebar').hide();
+}
+
+function showNotice(){
+	$('#noticebar').show();
+}
+
+
+var appearcount = 0;
+var ht = 0;
+var oldX=0;oldY=0;
+
+function onImgMouseMove(evt){
+	if (document.all)
+	{
+		mouseX = event.x;
+		mouseY = event.y;
+	}else{
+		mouseX = evt.pageX;
+		mouseY = evt.pageY;
+	}
+	if (appearcount > 0){
+		if (mouseY < 40){
+			showHeader();
+			oldX = mouseX;
+			oldY = mouseY;
+			return;
+		}
+		return;
+	}
+	
+	showHeader();
+	oldX = mouseX;
+	oldY = mouseY;
+}
+
+
+
+function onHeaderMouseOver(){
+	clearTimeout(ht);
+}
+function onHeaderMouseOut(){
+	ht = setTimeout(hideHeader,1300);
+}
+
+function showHeader(){
+	if($('#header')[0].style.display != 'block'){
+		$('#header')[0].style.display = 'block';
+		clearTimeout(ht);
+		ht = setTimeout(hideHeader,1300);
+		appearcount++;
+	}
+
+}
+
+function hideHeader(){
+
+
+	$('#header')[0].style.display = 'none';
+	
+}
+
+function toggleHeader(){
+	if($('#header')[0].style.display == 'block'){
+		$('#header').hide();
+		$('#content')[0].style.marginTop = '0';
+	}else{
+		$('#header').show();
+		$('#content')[0].style.marginTop = '38px';
+	}
+}
+
+var trycount = 0;
+var imgobj;
+
+$(function(){
+
+	$(window).keydown(function(e){
+		if(e.keyCode == 27){
+			close_dialog();
+		}
+	});
+	$('#gyazo_img').click(function(e){
+		toggleHeader();
+	});
+
+});
+
+
+$(function(){
+	$('#delete').click(do_delete);
+	$('#star').mousedown(toggle_star)
+	.mouseover(function(e){
+		if(!$(e.target).hasClass('stared')){
+			$(e.target).css('background-position', '-22px 1px');
+		}
+	}).mouseout(function(e){
+		if(!$(e.target).hasClass('stared')){
+			$(e.target).css('background-position', '2px 2px');
+		}
+	});
+});
+
+function do_delete(e){
+	if (isPremium <= 0){
+		if(confirm(messages['delete_premium'])){
+			location.href = "/premium/";
+		};
+	
+	}else{
+		if (confirm(messages['delete_alert']))
+		{
+			$.ajax({
+				type: "POST",
+				url: "/edit/do_delete",
+				data: "fname="+image_id,
+				dataType: "json",
+				success: function(data, dataType){
+					$('#gyazo_img').fadeOut('fast');
+					if (data.stat == "ok"){
+						location.href = '/history';
+					}else{
+						alert(messages['delete_fail'] + data.msg);
+					}
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown){
+					alert(messages['server_error']);
+				}
+			});
+		}
+	}
+}
+function toggle_star(e){
+	var star = $(e.target);
+	$(star).addClass('prestared').css('background-position', '-21px 2px')
+	$.ajax({
+		type: "POST",
+		url: "/edit/toggle_star",
+		data: "fname="+image_id,
+		dataType: "json",
+		success: function(data, dataType){
+			if (data.stat == "ok"){
+				if(!star.hasClass("stared")){
+					$(star).removeClass('prestared').addClass('stared').css('background-position', '-21px 2px')
+				}else{
+					$(star).removeClass('prestared').removeClass('stared').css('background-position', '2px 2px')
+				}
+			}
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown){
+			alert(messages['server_error']);
+		}
+	});
+}
+</script>
+
+</body>
+</html>
