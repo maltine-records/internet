@@ -1,7 +1,6 @@
 vyatta.config.boot
 	eth0 が 家サーバのルータ側
 	eth4 が USB ether で CentreCOM スイッチ側
-		まだ vlan は 9 までしか作ってない
 
 	DNS forwarding じゃなくて vyatta 自身で解決する方法がわからなかった (bind とかいれないとだめ?)
 
@@ -12,7 +11,7 @@ vyatta.config.boot
 	port 15: ALL, untagged 
 	それ以外のポートは それぞれ VLAN が分かれてて、port 15,16 とだけつながってる.
 
-	端末の関係でスイッチのアドレスが 192.168.20.4 等になっているけども, vyatta の eth4 から見えるようにすべき.
+
 
 
 
@@ -25,7 +24,4 @@ vyatta.config.boot
 
 環境
 	192.168.20.10	家サーバ (DNS, ルータになっていてここから外へ出る)
-
-
-
 
