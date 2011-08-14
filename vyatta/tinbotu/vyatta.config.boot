@@ -46,7 +46,7 @@ service {
         global-parameters "default-lease-time 300;"
         global-parameters "option domain-name-servers 8.8.8.8;"
         shared-network-name LOCAL02 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.22.0/24 {
                 default-router 192.168.22.254
                 lease 86400
@@ -56,7 +56,7 @@ service {
             }
         }
         shared-network-name LOCAL03 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.23.0/24 {
                 default-router 192.168.23.254
                 lease 86400
@@ -66,7 +66,7 @@ service {
             }
         }
         shared-network-name LOCAL04 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.24.0/24 {
                 default-router 192.168.24.254
                 lease 86400
@@ -76,7 +76,7 @@ service {
             }
         }
         shared-network-name LOCAL05 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.25.0/24 {
                 default-router 192.168.25.254
                 lease 86400
@@ -86,7 +86,7 @@ service {
             }
         }
         shared-network-name LOCAL06 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.26.0/24 {
                 default-router 192.168.26.254
                 lease 86400
@@ -96,7 +96,7 @@ service {
             }
         }
         shared-network-name LOCAL07 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.27.0/24 {
                 default-router 192.168.27.254
                 lease 86400
@@ -106,7 +106,7 @@ service {
             }
         }
         shared-network-name LOCAL08 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.28.0/24 {
                 default-router 192.168.28.254
                 lease 86400
@@ -116,7 +116,7 @@ service {
             }
         }
         shared-network-name LOCAL09 {
-            authoritative disable
+            authoritative enable
             subnet 192.168.29.0/24 {
                 default-router 192.168.29.254
                 lease 86400
