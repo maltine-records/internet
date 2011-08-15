@@ -126,13 +126,14 @@ service {
                 start 10.10.19.16 {
                     stop 10.10.19.160
                 }
+                subnet-parameters "default-lease-time 300;"
             }
         }
         shared-network-name LOCAL10 {
             authoritative enable
             subnet 10.10.20.0/24 {
                 default-router 10.10.20.254
-                lease 86400
+                lease 1200
                 start 10.10.20.16 {
                     stop 10.10.20.160
                 }
@@ -141,8 +142,17 @@ service {
     }
     dns {
         forwarding {
-            cache-size 512
+            cache-size 1024
             listen-on eth4
+            listen-on eth4.2
+            listen-on eth4.3
+            listen-on eth4.4
+            listen-on eth4.5
+            listen-on eth4.6
+            listen-on eth4.7
+            listen-on eth4.8
+            listen-on eth4.9
+            listen-on eth4.10
             system
         }
     }
