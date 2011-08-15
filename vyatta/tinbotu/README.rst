@@ -15,12 +15,11 @@ vyatta.config.boot
 VLAN
 ----
 
-- port 16: ALL, tagged   これを vyatta の eth4 と繋ぐ。
+- port 16:    ALL, tagged   これを vyatta の eth4 と繋ぐ。
 
-- port 15: ALL, untagged 
+- port 11-15: ALL, untagged 
 
-- それ以外のポートは それぞれ VLAN が分かれてて、port 15,16 とだけつながってる.
-
+- port 2-10:  VLAN それぞれのポート と 16, untagged
 
 
 環境

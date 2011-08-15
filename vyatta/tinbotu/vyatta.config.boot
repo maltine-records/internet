@@ -39,18 +39,6 @@ interfaces {
         vif 10 {
             address 10.10.20.254/24
         }
-        vif 11 {
-            address 10.10.21.254/24
-        }
-        vif 12 {
-            address 10.10.22.254/24
-        }
-        vif 13 {
-            address 10.10.23.254/24
-        }
-        vif 14 {
-            address 10.10.24.254/24
-        }
     }
     loopback lo {
     }
@@ -64,7 +52,7 @@ service {
             authoritative enable
             subnet 10.10.12.0/24 {
                 default-router 10.10.12.254
-                lease 86400
+                lease 1200
                 start 10.10.12.16 {
                     stop 10.10.12.160
                 }
@@ -74,7 +62,7 @@ service {
             authoritative enable
             subnet 10.10.13.0/24 {
                 default-router 10.10.13.254
-                lease 86400
+                lease 1200
                 start 10.10.13.16 {
                     stop 10.10.13.160
                 }
@@ -84,7 +72,7 @@ service {
             authoritative enable
             subnet 10.10.14.0/24 {
                 default-router 10.10.14.254
-                lease 86400
+                lease 1200
                 start 10.10.14.16 {
                     stop 10.10.14.160
                 }
@@ -94,7 +82,7 @@ service {
             authoritative enable
             subnet 10.10.15.0/24 {
                 default-router 10.10.15.254
-                lease 86400
+                lease 1200
                 start 10.10.15.16 {
                     stop 10.10.15.160
                 }
@@ -104,7 +92,7 @@ service {
             authoritative enable
             subnet 10.10.16.0/24 {
                 default-router 10.10.16.254
-                lease 86400
+                lease 1200
                 start 10.10.16.16 {
                     stop 10.10.16.160
                 }
@@ -114,7 +102,7 @@ service {
             authoritative enable
             subnet 10.10.17.0/24 {
                 default-router 10.10.17.254
-                lease 86400
+                lease 1200
                 start 10.10.17.16 {
                     stop 10.10.17.160
                 }
@@ -124,7 +112,7 @@ service {
             authoritative enable
             subnet 10.10.18.0/24 {
                 default-router 10.10.18.254
-                lease 86400
+                lease 1200
                 start 10.10.18.16 {
                     stop 10.10.18.160
                 }
@@ -134,7 +122,7 @@ service {
             authoritative enable
             subnet 10.10.19.0/24 {
                 default-router 10.10.19.254
-                lease 86400
+                lease 1200
                 start 10.10.19.16 {
                     stop 10.10.19.160
                 }
@@ -147,46 +135,6 @@ service {
                 lease 86400
                 start 10.10.20.16 {
                     stop 10.10.20.160
-                }
-            }
-        }
-        shared-network-name LOCAL11 {
-            authoritative enable
-            subnet 10.10.21.0/24 {
-                default-router 10.10.21.254
-                lease 86400
-                start 10.10.21.16 {
-                    stop 10.10.21.160
-                }
-            }
-        }
-        shared-network-name LOCAL12 {
-            authoritative enable
-            subnet 10.10.22.0/24 {
-                default-router 10.10.22.254
-                lease 86400
-                start 10.10.22.16 {
-                    stop 10.10.22.160
-                }
-            }
-        }
-        shared-network-name LOCAL13 {
-            authoritative enable
-            subnet 10.10.23.0/24 {
-                default-router 10.10.23.254
-                lease 86400
-                start 10.10.23.16 {
-                    stop 10.10.23.160
-                }
-            }
-        }
-        shared-network-name LOCAL14 {
-            authoritative enable
-            subnet 10.10.24.0/24 {
-                default-router 10.10.24.254
-                lease 86400
-                start 10.10.24.16 {
-                    stop 10.10.24.160
                 }
             }
         }
