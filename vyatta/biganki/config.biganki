@@ -12,9 +12,6 @@ interfaces {
         hw-id 00:40:26:c0:0f:8f
         smp_affinity auto
         speed auto
-        vif 1 {
-            address 10.10.11.10/24
-        }
         vif 2 {
             address 10.10.12.10/24
         }
@@ -39,6 +36,9 @@ interfaces {
         vif 9 {
             address 10.10.19.10/24
         }
+        vif 10 {
+            address 10.10.20.10/24
+        }
     }
     loopback lo {
     }
@@ -56,17 +56,6 @@ service {
                     stop 10.10.10.100
                 }
             }
-        }
-        shared-network-name vlan1 {
-            authoritative disable
-            subnet 10.10.11.0/24 {
-                default-router 10.10.11.10
-                dns-server 10.10.11.10
-                lease 86400
-                start 10.10.11.11 {
-                    stop 10.10.11.100
-                }
-           }
         }
         shared-network-name vlan2 {
             authoritative disable
@@ -156,12 +145,23 @@ service {
                 }
            }
         }
+        shared-network-name vlan10 {
+            authoritative disable
+            subnet 10.10.20.0/24 {
+                default-router 10.10.20.10
+                dns-server 10.10.20.10
+                lease 86400
+                start 10.10.20.11 {
+                    stop 10.10.20.100
+                }
+           }
+        }
+
     }
     dns {
         forwarding {
             cache-size 150
             listen-on eth1
-            listen-on eth1.1
             listen-on eth1.2
             listen-on eth1.3
             listen-on eth1.4
@@ -170,6 +170,7 @@ service {
             listen-on eth1.7
             listen-on eth1.8
             listen-on eth1.9
+            listen-on eth1.10
         }
     }
     nat {
