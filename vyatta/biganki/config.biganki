@@ -6,10 +6,9 @@ interfaces {
         smp_affinity auto
         speed auto
     }
-    ethernet eth1 {
+    ethernet eth2 {
         address 10.10.10.10/24
         duplex auto
-        hw-id 00:40:26:c0:0f:8f
         smp_affinity auto
         speed auto
         vif 2 {
@@ -39,19 +38,63 @@ interfaces {
         vif 10 {
             address 10.10.20.10/24
         }
+        vif 11 {
+            address 10.10.21.10/24
+        }
+        vif 12 {
+            address 10.10.22.10/24
+        }
+        vif 13 {
+            address 10.10.23.10/24
+        }
     }
     loopback lo {
+    }
+    pseudo-ethernet peth1 {
+        address 10.10.11.10/24
+        link eth2
+        mac 00:40:26:c0:0f:0a
     }
 }
 service {
     dhcp-server {
         disabled false
+        shared-network-name LOCAL11 {
+            authoritative disable
+            subnet 10.10.21.0/24 {
+                default-router 10.10.21.10
+                lease 600
+                start 10.10.21.32 {
+                    stop 10.10.21.192
+                }
+            }
+        }
+        shared-network-name LOCAL12 {
+            authoritative disable
+            subnet 10.10.22.0/24 {
+                default-router 10.10.22.10
+                lease 600
+                start 10.10.22.32 {
+                    stop 10.10.22.192
+                }
+            }
+        }
+        shared-network-name LOCAL13 {
+            authoritative disable
+            subnet 10.10.23.0/24 {
+                default-router 10.10.23.10
+                lease 600
+                start 10.10.23.32 {
+                    stop 10.10.23.192
+                }
+            }
+        }
         shared-network-name vlan2 {
             authoritative disable
             subnet 10.10.12.0/24 {
                 default-router 10.10.12.10
                 dns-server 10.10.12.10
-                lease 86400
+                lease 600
                 start 10.10.12.32 {
                     stop 10.10.12.192
                 }
@@ -62,7 +105,7 @@ service {
             subnet 10.10.13.0/24 {
                 default-router 10.10.13.10
                 dns-server 10.10.13.10
-                lease 86400
+                lease 600
                 start 10.10.13.32 {
                     stop 10.10.13.192
                 }
@@ -73,7 +116,7 @@ service {
             subnet 10.10.14.0/24 {
                 default-router 10.10.14.10
                 dns-server 10.10.14.10
-                lease 86400
+                lease 600
                 start 10.10.14.32 {
                     stop 10.10.14.192
                 }
@@ -84,7 +127,7 @@ service {
             subnet 10.10.15.0/24 {
                 default-router 10.10.15.10
                 dns-server 10.10.15.10
-                lease 86400
+                lease 600
                 start 10.10.15.32 {
                     stop 10.10.15.192
                 }
@@ -95,7 +138,7 @@ service {
             subnet 10.10.16.0/24 {
                 default-router 10.10.16.10
                 dns-server 10.10.16.10
-                lease 86400
+                lease 600
                 start 10.10.16.32 {
                     stop 10.10.16.192
                 }
@@ -106,7 +149,7 @@ service {
             subnet 10.10.17.0/24 {
                 default-router 10.10.17.10
                 dns-server 10.10.17.10
-                lease 86400
+                lease 600
                 start 10.10.17.32 {
                     stop 10.10.17.192
                 }
@@ -117,7 +160,7 @@ service {
             subnet 10.10.18.0/24 {
                 default-router 10.10.18.10
                 dns-server 10.10.18.10
-                lease 86400
+                lease 600
                 start 10.10.18.32 {
                     stop 10.10.18.192
                 }
@@ -128,7 +171,7 @@ service {
             subnet 10.10.19.0/24 {
                 default-router 10.10.19.10
                 dns-server 10.10.19.10
-                lease 86400
+                lease 600
                 start 10.10.19.32 {
                     stop 10.10.19.192
                 }
@@ -139,7 +182,7 @@ service {
             subnet 10.10.20.0/24 {
                 default-router 10.10.20.10
                 dns-server 10.10.20.10
-                lease 86400
+                lease 600
                 start 10.10.20.11 {
                     stop 10.10.20.100
                 }
@@ -149,16 +192,19 @@ service {
     dns {
         forwarding {
             cache-size 150
-            listen-on eth1
-            listen-on eth1.2
-            listen-on eth1.3
-            listen-on eth1.4
-            listen-on eth1.5
-            listen-on eth1.6
-            listen-on eth1.7
-            listen-on eth1.8
-            listen-on eth1.9
-            listen-on eth1.10
+            listen-on eth2
+            listen-on eth2.2
+            listen-on eth2.3
+            listen-on eth2.4
+            listen-on eth2.5
+            listen-on eth2.6
+            listen-on eth2.7
+            listen-on eth2.8
+            listen-on eth2.9
+            listen-on eth2.10
+            listen-on eth2.11
+            listen-on eth2.12
+            listen-on eth2.13
         }
     }
     nat {
@@ -172,6 +218,45 @@ service {
             authorization ro
         }
         listen-address 10.10.10.10 {
+            port 161
+        }
+        listen-address 10.10.11.10 {
+            port 161
+        }
+        listen-address 10.10.12.10 {
+            port 161
+        }
+        listen-address 10.10.13.10 {
+            port 161
+        }
+        listen-address 10.10.14.10 {
+            port 161
+        }
+        listen-address 10.10.15.10 {
+            port 161
+        }
+        listen-address 10.10.16.10 {
+            port 161
+        }
+        listen-address 10.10.17.10 {
+            port 161
+        }
+        listen-address 10.10.18.10 {
+            port 161
+        }
+        listen-address 10.10.19.10 {
+            port 161
+        }
+        listen-address 10.10.20.10 {
+            port 161
+        }
+        listen-address 10.10.21.10 {
+            port 161
+        }
+        listen-address 10.10.22.10 {
+            port 161
+        }
+        listen-address 10.10.23.10 {
             port 161
         }
     }
@@ -196,11 +281,7 @@ system {
         }
     }
     ntp {
-        server 0.vyatta.pool.ntp.org {
-        }
-        server 1.vyatta.pool.ntp.org {
-        }
-        server 2.vyatta.pool.ntp.org {
+        server ntp.ring.gr.jp {
         }
     }
     package {
