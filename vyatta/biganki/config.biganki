@@ -46,6 +46,105 @@ interfaces {
 service {
     dhcp-server {
         disabled false
+        shared-network-name vlan2 {
+            authoritative disable
+            subnet 10.10.12.0/24 {
+                default-router 10.10.12.10
+                dns-server 10.10.12.10
+                lease 86400
+                start 10.10.12.11 {
+                    stop 10.10.12.100
+                }
+            }
+        }
+        shared-network-name vlan3 {
+            authoritative disable
+            subnet 10.10.13.0/24 {
+                default-router 10.10.13.10
+                dns-server 10.10.13.10
+                lease 86400
+                start 10.10.13.11 {
+                    stop 10.10.13.100
+                }
+            }
+        }
+        shared-network-name vlan4 {
+            authoritative disable
+            subnet 10.10.14.0/24 {
+                default-router 10.10.14.10
+                dns-server 10.10.14.10
+                lease 86400
+                start 10.10.14.11 {
+                    stop 10.10.14.100
+                }
+            }
+        }
+        shared-network-name vlan5 {
+            authoritative disable
+            subnet 10.10.15.0/24 {
+                default-router 10.10.15.10
+                dns-server 10.10.15.10
+                lease 86400
+                start 10.10.15.11 {
+                    stop 10.10.15.100
+                }
+            }
+        }
+        shared-network-name vlan6 {
+            authoritative disable
+            subnet 10.10.16.0/24 {
+                default-router 10.10.16.10
+                dns-server 10.10.16.10
+                lease 86400
+                start 10.10.16.11 {
+                    stop 10.10.16.100
+                }
+            }
+        }
+        shared-network-name vlan7 {
+            authoritative disable
+            subnet 10.10.17.0/24 {
+                default-router 10.10.17.10
+                dns-server 10.10.17.10
+                lease 86400
+                start 10.10.17.11 {
+                    stop 10.10.17.100
+                }
+            }
+        }
+        shared-network-name vlan8 {
+            authoritative disable
+            subnet 10.10.18.0/24 {
+                default-router 10.10.18.10
+                dns-server 10.10.18.10
+                lease 86400
+                start 10.10.18.11 {
+                    stop 10.10.18.100
+                }
+            }
+        }
+        shared-network-name vlan9 {
+            authoritative disable
+            subnet 10.10.19.0/24 {
+                default-router 10.10.19.10
+                dns-server 10.10.19.10
+                lease 86400
+                start 10.10.19.11 {
+                    stop 10.10.19.100
+                }
+            }
+        }
+        shared-network-name vlan10 {
+            authoritative disable
+            subnet 10.10.20.0/24 {
+                default-router 10.10.20.10
+                dns-server 10.10.20.10
+                lease 86400
+                start 10.10.20.11 {
+                    stop 10.10.20.100
+                }
+            }
+        }
         shared-network-name yakesummer {
             authoritative disable
             subnet 10.10.10.0/24 {
@@ -57,106 +156,6 @@ service {
                 }
             }
         }
-        shared-network-name vlan2 {
-            authoritative disable
-            subnet 10.10.12.0/24 {
-                default-router 10.10.12.10
-                dns-server 10.10.12.10
-                lease 86400
-                start 10.10.12.11 {
-                    stop 10.10.12.100
-                }
-           }
-        }
-        shared-network-name vlan3 {
-            authoritative disable
-            subnet 10.10.13.0/24 {
-                default-router 10.10.13.10
-                dns-server 10.10.13.10
-                lease 86400
-                start 10.10.13.11 {
-                    stop 10.10.13.100
-                }
-           }
-        }
-        shared-network-name vlan4 {
-            authoritative disable
-            subnet 10.10.14.0/24 {
-                default-router 10.10.14.10
-                dns-server 10.10.14.10
-                lease 86400
-                start 10.10.14.11 {
-                    stop 10.10.14.100
-                }
-           }
-        }
-        shared-network-name vlan5 {
-            authoritative disable
-            subnet 10.10.15.0/24 {
-                default-router 10.10.15.10
-                dns-server 10.10.15.10
-                lease 86400
-                start 10.10.15.11 {
-                    stop 10.10.15.100
-                }
-           }
-        }
-        shared-network-name vlan6 {
-            authoritative disable
-            subnet 10.10.16.0/24 {
-                default-router 10.10.16.10
-                dns-server 10.10.16.10
-                lease 86400
-                start 10.10.16.11 {
-                    stop 10.10.16.100
-                }
-           }
-        }
-        shared-network-name vlan7 {
-            authoritative disable
-            subnet 10.10.17.0/24 {
-                default-router 10.10.17.10
-                dns-server 10.10.17.10
-                lease 86400
-                start 10.10.17.11 {
-                    stop 10.10.17.100
-                }
-           }
-        }
-        shared-network-name vlan8 {
-            authoritative disable
-            subnet 10.10.18.0/24 {
-                default-router 10.10.18.10
-                dns-server 10.10.18.10
-                lease 86400
-                start 10.10.18.11 {
-                    stop 10.10.18.100
-                }
-           }
-        }
-        shared-network-name vlan9 {
-            authoritative disable
-            subnet 10.10.19.0/24 {
-                default-router 10.10.19.10
-                dns-server 10.10.19.10
-                lease 86400
-                start 10.10.19.11 {
-                    stop 10.10.19.100
-                }
-           }
-        }
-        shared-network-name vlan10 {
-            authoritative disable
-            subnet 10.10.20.0/24 {
-                default-router 10.10.20.10
-                dns-server 10.10.20.10
-                lease 86400
-                start 10.10.20.11 {
-                    stop 10.10.20.100
-                }
-           }
-        }
-
     }
     dns {
         forwarding {
@@ -177,6 +176,14 @@ service {
         rule 10 {
             outbound-interface eth0
             type masquerade
+        }
+    }
+    snmp {
+        community biganki {
+            authorization ro
+        }
+        listen-address 10.10.10.10 {
+            port 161
         }
     }
     ssh {
