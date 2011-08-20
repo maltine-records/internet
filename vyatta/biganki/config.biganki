@@ -145,17 +145,6 @@ service {
                 }
             }
         }
-        shared-network-name yakesummer {
-            authoritative disable
-            subnet 10.10.10.0/24 {
-                default-router 10.10.10.10
-                dns-server 10.10.10.10
-                lease 86400
-                start 10.10.10.32 {
-                    stop 10.10.10.192
-                }
-            }
-        }
     }
     dns {
         forwarding {
