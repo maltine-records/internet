@@ -1,0 +1,234 @@
+interfaces {
+    ethernet eth0 {
+        address dhcp
+        duplex auto
+        hw-id 00:23:54:04:70:04
+        smp_affinity auto
+        speed auto
+    }
+    ethernet eth1 {
+        address 10.10.10.10/24
+        duplex auto
+        hw-id 00:40:26:c0:0f:8f
+        smp_affinity auto
+        speed auto
+        vif 1 {
+            address 10.10.11.10/24
+        }
+        vif 2 {
+            address 10.10.12.10/24
+        }
+        vif 3 {
+            address 10.10.13.10/24
+        }
+        vif 4 {
+            address 10.10.14.10/24
+        }
+        vif 5 {
+            address 10.10.15.10/24
+        }
+        vif 6 {
+            address 10.10.16.10/24
+        }
+        vif 7 {
+            address 10.10.17.10/24
+        }
+        vif 8 {
+            address 10.10.18.10/24
+        }
+        vif 9 {
+            address 10.10.19.10/24
+        }
+    }
+    loopback lo {
+    }
+}
+service {
+    dhcp-server {
+        disabled false
+        shared-network-name yakesummer {
+            authoritative disable
+            subnet 10.10.10.0/24 {
+                default-router 10.10.10.10
+                dns-server 10.10.10.10
+                lease 86400
+                start 10.10.10.11 {
+                    stop 10.10.10.100
+                }
+            }
+        }
+        shared-network-name vlan1 {
+            authoritative disable
+            subnet 10.10.11.0/24 {
+                default-router 10.10.11.10
+                dns-server 10.10.11.10
+                lease 86400
+                start 10.10.11.11 {
+                    stop 10.10.11.100
+                }
+           }
+        }
+        shared-network-name vlan2 {
+            authoritative disable
+            subnet 10.10.12.0/24 {
+                default-router 10.10.12.10
+                dns-server 10.10.12.10
+                lease 86400
+                start 10.10.12.11 {
+                    stop 10.10.12.100
+                }
+           }
+        }
+        shared-network-name vlan3 {
+            authoritative disable
+            subnet 10.10.13.0/24 {
+                default-router 10.10.13.10
+                dns-server 10.10.13.10
+                lease 86400
+                start 10.10.13.11 {
+                    stop 10.10.13.100
+                }
+           }
+        }
+        shared-network-name vlan4 {
+            authoritative disable
+            subnet 10.10.14.0/24 {
+                default-router 10.10.14.10
+                dns-server 10.10.14.10
+                lease 86400
+                start 10.10.14.11 {
+                    stop 10.10.14.100
+                }
+           }
+        }
+        shared-network-name vlan5 {
+            authoritative disable
+            subnet 10.10.15.0/24 {
+                default-router 10.10.15.10
+                dns-server 10.10.15.10
+                lease 86400
+                start 10.10.15.11 {
+                    stop 10.10.15.100
+                }
+           }
+        }
+        shared-network-name vlan6 {
+            authoritative disable
+            subnet 10.10.16.0/24 {
+                default-router 10.10.16.10
+                dns-server 10.10.16.10
+                lease 86400
+                start 10.10.16.11 {
+                    stop 10.10.16.100
+                }
+           }
+        }
+        shared-network-name vlan7 {
+            authoritative disable
+            subnet 10.10.17.0/24 {
+                default-router 10.10.17.10
+                dns-server 10.10.17.10
+                lease 86400
+                start 10.10.17.11 {
+                    stop 10.10.17.100
+                }
+           }
+        }
+        shared-network-name vlan8 {
+            authoritative disable
+            subnet 10.10.18.0/24 {
+                default-router 10.10.18.10
+                dns-server 10.10.18.10
+                lease 86400
+                start 10.10.18.11 {
+                    stop 10.10.18.100
+                }
+           }
+        }
+        shared-network-name vlan9 {
+            authoritative disable
+            subnet 10.10.19.0/24 {
+                default-router 10.10.19.10
+                dns-server 10.10.19.10
+                lease 86400
+                start 10.10.19.11 {
+                    stop 10.10.19.100
+                }
+           }
+        }
+    }
+    dns {
+        forwarding {
+            cache-size 150
+            listen-on eth1
+            listen-on eth1.1
+            listen-on eth1.2
+            listen-on eth1.3
+            listen-on eth1.4
+            listen-on eth1.5
+            listen-on eth1.6
+            listen-on eth1.7
+            listen-on eth1.8
+            listen-on eth1.9
+        }
+    }
+    nat {
+        rule 10 {
+            outbound-interface eth0
+            type masquerade
+        }
+    }
+    ssh {
+        port 22
+        protocol-version v2
+    }
+}
+system {
+    config-management {
+        commit-revisions 20
+    }
+    console {
+    }
+    host-name vyatta
+    login {
+        user vyatta {
+            authentication {
+                encrypted-password $1$5Bs0iqUR$7HkIzR7uOVchZnda9qX9O1
+            }
+            level admin
+        }
+    }
+    ntp {
+        server 0.vyatta.pool.ntp.org {
+        }
+        server 1.vyatta.pool.ntp.org {
+        }
+        server 2.vyatta.pool.ntp.org {
+        }
+    }
+    package {
+        auto-sync 1
+        repository community {
+            components main
+            distribution stable
+            password ""
+            url http://packages.vyatta.com/vyatta
+            username ""
+        }
+    }
+    syslog {
+        global {
+            facility all {
+                level notice
+            }
+            facility protocols {
+                level debug
+            }
+        }
+    }
+    time-zone Asia/Tokyo
+}
+
+
+/* Warning: Do not remove the following line. */
+/* === vyatta-config-version: "dhcp-server@4:vrrp@1:system@4:cluster@1:wanloadbalance@2:webproxy@1:ipsec@2:quagga@2:zone-policy@1:webgui@1:nat@3:firewall@4:qos@1:config-management@1:content-inspection@2:conntrack-sync@1:dhcp-relay@1" === */
