@@ -25,7 +25,7 @@ class AirPort
     response = @agent.submit(form)
   end
 
-  def wireless_table
+  def wireless_table_body
     response = @agent.get(@uri)
     form = response.forms.first
     form['ID'] = '31'
@@ -42,12 +42,25 @@ class AirPort
       io.read
     end
   end
+
+  def wireless_table
+    data = wireless_table_body
+    rows = []
+    data.each_line do |line|
+      next if line.chomp.empty?
+      column = line.split(/\s+/).map do |column|
+        column unless column.empty?
+      end.compact
+      rows << column
+    end
+    return rows
+  end
 end
 
 if $0 == __FILE__ then
   ap = AirPort.new
   ap.login
-  puts ap.wireless_table
+  p ap.wireless_table
 end
 
 
