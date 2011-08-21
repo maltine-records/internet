@@ -53,15 +53,24 @@ class AirPort
       end.compact
       rows << column
     end
-    name = ['Radio Name', 'Mode', 'Op Channel', 'Assoc. Clients', 'Tx Pkts', 'Rx Pkts', 'Error']
-    return [name] + rows
+    return rows
   end
 end
 
 if $0 == __FILE__ then
   ap = AirPort.new
   ap.login
-  p ap.wireless_table
+  table = ap.wireless_table
+  name = ['Radio Name', 'Mode', 'Op Channel', 'Assoc. Clients', 'Tx Pkts', 'Rx Pkts', 'Error']
+  clients = 0
+  name.zip(*table).map do |record|
+    if record.shift == 'Assoc. Clients' then
+      record.each do |assocs|
+        clients += assocs.to_i
+      end
+    end
+  end
+  puts clients
 end
 
 
