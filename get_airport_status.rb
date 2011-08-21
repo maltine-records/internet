@@ -53,7 +53,8 @@ class AirPort
       end.compact
       rows << column
     end
-    return rows
+    name = ['Radio Name', 'Mode', 'Op Channel', 'Assoc. Clients', 'Tx Pkts', 'Rx Pkts', 'Error']
+    return [name] + rows
   end
 end
 
