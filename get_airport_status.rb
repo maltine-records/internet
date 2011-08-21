@@ -34,14 +34,20 @@ class AirPort
     form = response.forms.last
     form['ID'] = '250'
     response = @agent.submit(form)
-    puts response.body.gsub(%r!.*?Radio Table-->(.*?)</table>.*!m) { $1 }
+    table_content = response.body.gsub(%r!.*?Radio Table-->(.*?)</table>.*!m) { $1 }
+    table = "<html><body><table>#{table_content}</table></body></html>"
+    IO.popen("w3m -dump -T text/html", "r+") do |io|
+      io.print(table)
+      io.close_write
+      io.read
+    end
   end
 end
 
 if $0 == __FILE__ then
   ap = AirPort.new
   ap.login
-  ap.wireless_table
+  puts ap.wireless_table
 end
 
 
