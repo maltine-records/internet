@@ -8,8 +8,8 @@ require 'mechanize'
 require 'uri'
 
 class AirPort
-  def initialize(url = 'http://10.10.16.16/')
-    @uri = URI.parse(url)
+  def initialize(addr = '10.10.16.16')
+    @uri = URI.parse("http://#{addr}")
     @agent = Mechanize.new
     @agent.user_agent_alias = "Windows IE 6"
   end
@@ -58,7 +58,9 @@ class AirPort
 end
 
 if $0 == __FILE__ then
-  ap = AirPort.new
+  exit if ARGV.empty?
+  addr = ARGV.join
+  ap = AirPort.new(addr)
   ap.login
   table = ap.wireless_table
   name = ['Radio Name', 'Mode', 'Op Channel', 'Assoc. Clients', 'Tx Pkts', 'Rx Pkts', 'Error']
