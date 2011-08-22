@@ -191,9 +191,21 @@ Vyattaのトラブルなど
 
   - ただし ALIENWARE は 11b の 14ch 拾えるからスゴイ
 
-- POE給電対応のスイッチほしい！
+- PoE(Power over Ether)給電対応のスイッチほしい！
 
   - KANEKURE
+
+  - スイッチの近くのインジェクタから給電し、スプリッタで配電する製品もある
+
+    - http://www.switch-science.com/products/detail.php?product_id=695
+
+    - @maris_HY++
+
+      - https://twitter.com/#!/maris_HY/status/105577077360701440
+
+      - https://twitter.com/#!/maris_HY/status/105580301241167872
+
+      - https://twitter.com/#!/maris_HY/status/105582536436097024
 
 - USB NIC罰
 
@@ -201,5 +213,5 @@ Vyattaのトラブルなど
 
     - 金くれ
 
-    - PCMCIA でいいのでは説
+  - PCMCIA でいいのでは説もある
 
