@@ -62,6 +62,20 @@ BridgeMIB
 
     - http://www.ieee802.org/1/files/public/MIBs/IEEE8021-BRIDGE-MIB-200810150000Z.txt
 
+
+WiFi
+----
+非常に混雑した RF 空間の場合での設定
+
+  - "802.11b-1999 Higher Speed Physical Layer Extension in the 2.4 GHz band" / http://standards.ieee.org/getieee802/download/802.11b-1999.pdf
+
+  - DD-WRT - Atheros wireless settigs / http://www.dd-wrt.com/wiki/index.php/Atheros/ath_wireless_settings
+
+  - 802 Channel Freq Mappings.pdf / http://download.wcvirtual.com/reference/802%20Channel%20Freq%20Mappings.pdf
+
+  - 802.11b/802.11g の信号スペクトル / http://ribf.riken.jp/comp/spectra.html
+
+
 課題や反省点
 ============
 
@@ -129,7 +143,20 @@ SNMPマネージャなどの監視の設定を甘くみていた
 
     - 速度を犠牲にしても衝突を抑制する設定ができるはずなので調べる(atheros とかを要 hack かもしれない)
 
+      + RTS/CTS 両方有効に. デフォルトで無効の可能性がある
+
+      + RTS Threshold を大幅に小さく 
+
+      + RTS Retry Limit を若干大きく 
+
+      + ACK Timing を大幅に大きく 
+
+      + 11g なら Maximum Rate を下げる
+
+
     - アナライザで解析したい
+
+    - *UNIT* 側の WiFi は切ってもらえたが、実際は地下にもかかわらずポータブル WiFi ルータの持ち込みやビル管理用と思われる 11n の電波が出ていた
 
 - 上流ルーターへの名前解決でインターネット崩壊
 
@@ -142,6 +169,7 @@ SNMPマネージャなどの監視の設定を甘くみていた
   - vyatta が耐えても上流が家庭用ブロードバンドルータでは崩壊するかも
 
     - 上流次第で vyatta が PPPoE するとか
+
       - 交渉が難しそう
 
     - セッション数が多くてもトラフィックが多くないなら VPN はどうか
