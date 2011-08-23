@@ -65,7 +65,7 @@ BridgeMIB
 
 WiFi
 ----
-非常に混雑した RF 空間の場合での設定
+- 混雑した RF 空間の場合での設定
 
   - "802.11b-1999 Higher Speed Physical Layer Extension in the 2.4 GHz band" / http://standards.ieee.org/getieee802/download/802.11b-1999.pdf
 
