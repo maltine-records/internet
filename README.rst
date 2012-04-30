@@ -27,9 +27,6 @@ tinbotu
 
   - 24 ポート L2SW / 100Base-TX / Cisco PoE (not 802.3af)
 
-    - 貸し出しているので戻してもらわないといけない
-
-
 - Cisco PoE パワーインジェクタ  * 5台 (PoEスイッチがあれば不要だけど一応)
   
   - +48V ACアダプタ
@@ -39,7 +36,7 @@ tinbotu
 
   - 20m * 2
   - 15m * 1
-  - 10m * 3
+  - 10m * 2
   -  5m * 1
   -  3m * 4
   -  1m * 5
@@ -62,6 +59,8 @@ WANTED
 
 
 - ネットワーク監視マシン(cacti or munin or zabbix)
+  
+  - **mapi** ?
 
 - 電源タップ、たこ足、LANケーブル、養生テープ　を大量に
 
