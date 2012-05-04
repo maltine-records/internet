@@ -11,13 +11,13 @@ tinbotu
 -------
 
 
-- Cisco AIR-AP1231G-J-K9 * 4台
+- Cisco AIR-AP1231G-J-K9 * 5台
 
   - 11g, 11a(W52)
   
   - http://www.cisco.com/web/JP/product/hs/wireless/airo1200/prodlit/casap_ds.html
 
-- Cisco AIR-AP1131AG-P-K9 * 1台
+- Cisco AIR-AP1131AG-P-K9 * 3台
 
   - 11g, 11a(W53)
 
@@ -27,8 +27,8 @@ tinbotu
 
   - 24 ポート L2SW / 100Base-TX / Cisco PoE (not 802.3af)
 
-- Cisco PoE パワーインジェクタ  * 5台 (PoEスイッチがあれば不要だけど一応)
-  
+- Cisco PoE パワーインジェクタ  * 7台 (PoEスイッチがあれば不要だけど一応)
+
   - +48V ACアダプタ
 
 
