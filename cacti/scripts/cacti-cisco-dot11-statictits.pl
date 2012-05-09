@@ -112,7 +112,7 @@ my($snmp, $error) = Net::SNMP->session(
   ) or croak("Net::SNMP->session()\n");
 
 
-my $cacti_readble = undef;
+my $cacti_readable = undef;
 foreach my $mib(keys %mibs){
  my $oid = $mib;
   for(my $walk=0; $walk<= 50; $walk++){
@@ -121,13 +121,13 @@ foreach my $mib(keys %mibs){
    if($result){
      my $data;
      ($oid, $data) = (%{$result});
-     $cacti_readble .= sprintf("%s:%s ", $mibs{$mib}[$walk], $data);
+     $cacti_readable .= sprintf("%s:%s ", $mibs{$mib}[$walk], $data);
      printf("%s(%s): %s\n", $mibs{$mib}[$walk], $oid, $data) if $debug;
    }
   }
 }
 
-print $cacti_readble;
+print $cacti_readable;
 
 
 __END__
