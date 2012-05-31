@@ -23,6 +23,9 @@ Script/Command
 perl <path_cacti>/scripts/cacti-cisco-dot11-statictits.pl <host> <community> <version>
 
 
+4. 
+
+
 =head AUTHOR
 Akira KUMAGAI <kuma _at_ ultrasync _dot_ net>
 
