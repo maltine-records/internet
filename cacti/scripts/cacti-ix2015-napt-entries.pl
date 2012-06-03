@@ -50,6 +50,7 @@ my $telnet = Net::Telnet->new(
 #  Input_log => "./input.txt",
 );
 
+$telnet->max_buffer_length(20485760);
 $telnet->open($host);
 $telnet->waitfor("/login: /i");
 $telnet->print($userid);
