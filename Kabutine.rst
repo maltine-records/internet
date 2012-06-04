@@ -169,21 +169,15 @@ WiFi
 
    - うまいネーミングを考える必要
 
-     - 2.4GHz
+    - 2.4GHz
 
-      - kabutine1
-      - kabutine2
-      - kabutine3
-      - kabutine4
-      - kabutine5
+      - kabutine
 
     - 5GHz 
 
-      - kabutine1-highspeed
-      - kabutine2-highspeed
-      - kabutine3-highspeed
-      - kabutine4-highspeed
-      - kabutine5-highspeed
+      - kabutine-highspeed
+
+    - 全部同じにします
 
    - 他に案があれば
 
