@@ -217,6 +217,9 @@ Vyattaのトラブルなど
     - プロジェクターで投影など
 
   - 無線LANアクセスポイントごとの接続数も表示できればよりよい
+  
+  - https://gist.github.com/1145832
+
 
 - **Vyatta 箱 (NAT, dhcpd, dnsmasq) 自体の問題はほとんど起こらなかった**
 
