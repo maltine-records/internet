@@ -1,0 +1,985 @@
+<!-- Copyright 2004 Instant802 Networks, Inc. All Rights Reserved. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+Copyright 2004 Instant802 Networks, Inc. All Rights Reserved.
+
+Top parent template of all navigation templates.
+By default the TEMPLATE client tag below is replaced with
+horizontal_tabbed_navigation.html
+horizontal_dropdown_navigation.html
+or
+vertical_tabbed_navigation.html
+depending on the user's selected navigation scheme.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"><!--- horizontal_dropdown_navigation.html... --><!--- ...horizontal_dropdown_navigation.html --><!--- basic_setup.html... --><!--- ...basic_setup.html --><head>
+<!--
+Print the title using label resource AppName and if the the value of 'current_action'
+is a feature the feature's associated label resource.
+@see admin-features.hdf
+@see Labels.hdf
+-->
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<meta content="text/javascript" http-equiv="Content-Script-Type" />
+
+  <title>Administration Console
+  
+  </title>
+
+<script src="debug.js" type="text/javascript" language="javascript"></script>
+<script src="stringutil.js" type="text/javascript" language="javascript"></script>
+<script src="dsdom.js" type="text/javascript" language="javascript"></script>
+<script src="style.js" type="text/javascript" language="javascript"></script>
+<script src="base.js" type="text/javascript" language="javascript"></script>
+<script src="switcher.js" type="text/javascript" language="javascript"></script>
+<!-- [Remove to improve performance] <script language="javascript" type="text/javascript" src="widgets.js"></script -->
+<!-- [Remove to improve performance] <script language="javascript" type="text/javascript" src="styleswitcher.js"></script -->
+<script src="navigator.js" type="text/javascript" language="javascript"></script>
+<script src="polling.js" type="text/javascript" language="javascript"></script>
+
+<script src="progress.js" type="text/javascript" language="javascript"></script>
+<style type="text/css">
+&lt;!--
+  TABLE.progress { margin: 4px; border: 2px solid #999999; background-color: #FFFFFF} TABLE.progress TD { margin: 0px; padding: 0px } 
+--&gt;
+</style>
+
+
+<link media="screen,projection" href="ds3.css" title="dss3" rel="stylesheet" type="text/css" />
+
+
+<script language="javascript" type="text/javascript">
+&lt;!--
+// resource strings needed by various client templates that invoke code based
+// in js files that display localizable messages.
+resourceDictionary.Messages.CharsNotAllwd = "The following characters are not allowed: %s";
+resourceDictionary.Messages.IntNtVld = "The value is not a valid integer.";
+resourceDictionary.Messages.StrNotLen = "The string is %1 characters long, but must be %2 characters long.";
+resourceDictionary.Messages.StrNotLen2 = "The value must be at most %s characters long.";
+resourceDictionary.Messages.StrNotLen3 = "The value must be at least %s character long.";
+resourceDictionary.Messages.ValAtLst = "The value must be at least %s.";
+resourceDictionary.Messages.ValAtMst = "The value must be at most %s.";
+resourceDictionary.Messages.IntNonNum = "The value contains a non-numerical character.";
+resourceDictionary.Messages.UpdtErr = "Update failed.";
+
+/**
+ * Set the background color of the clicked font size selector.
+ */
+function setClickedColor( o ) {
+  document.getElementById( 'smallA' ).style.backgroundColor = o.id == 'smallA' ? "#D7D2BB" : "";
+  document.getElementById( 'normalA' ).style.backgroundColor = o.id == 'normalA' ? "#D7D2BB" : "";
+  document.getElementById( 'mediumA' ).style.backgroundColor = o.id == 'mediumA' ? "#D7D2BB" : "";
+  document.getElementById( 'largeA' ).style.backgroundColor = o.id == 'largeA' ? "#D7D2BB" : "";
+  
+  document.getElementById( 'smallA' ).style.cursor = o.id == 'smallA' ? "" : "pointer";
+  document.getElementById( 'normalA' ).style.cursor = o.id == 'normalA' ? "" : "pointer";
+  document.getElementById( 'mediumA' ).style.cursor = o.id == 'mediumA' ? "" : "pointer";
+  document.getElementById( 'largeA' ).style.cursor = o.id == 'largeA' ? "" : "pointer";
+  o.ds_hilited = false;
+}
+/**
+ * Set the mouse over color of the given font size selector.
+ */
+function setOverColor( o ) {
+  if( o.style.backgroundColor == "" ) {
+    o.style.backgroundColor = "#f9f4dd";
+    o.ds_hilited = true;
+  }
+}
+/**
+ * Set the mouse out color of the given font size selector.
+ */
+function setOutColor( o ) {
+  if( o.ds_hilited ) {
+    o.style.backgroundColor = "";
+    o.ds_hilited = false;
+  }
+}
+// --&gt;
+</script>
+<style type="text/css">
+&lt;!--
+.A {
+  padding: 0px 6px 0px 6px;
+}
+--&gt;
+</style>
+
+<!--- horizontal_dropdown_navigation.html... -->
+
+
+<!--- ...horizontal_dropdown_navigation.html -->
+
+<!--- basic_setup.html... -->
+
+<script language="javascript" type="text/javascript">
+&lt;!--
+var ipallocation = "manual";
+/* HAVE_MUTABLE_ADMIN_NAME start */
+var MAX_ADMIN_NAME_LEN = 12;
+var MIN_ADMIN_NAME_LEN = 1;
+/* HAVE_MUTABLE_ADMIN_NAME end */
+setMainForm("basic_setup");
+
+function alphanumericsymbols(value){
+	var numaric = value;
+	for(var i=0; i&lt;numaric.length; i++){
+		var alphaa = numaric.charAt(i);
+		var c = alphaa.charCodeAt(0);
+		if(!(c &gt; 31 &amp;&amp; c &lt; 127 &amp;&amp; c != 34))
+			return false;
+	}
+	return true;
+}
+function init() {
+	formElements = getMainForm().elements;
+	for( var i = 0; i &lt; formElements.length; i++ )
+		formElements[i].valid = true;
+}
+
+function indicateIPAllocation() {
+	if( ipallocation == "manual" ) {
+	} else {
+	}
+}
+
+function selectedValue( selector ) {
+	var index = selector.selectedIndex;
+	var item = selector.options[index];
+	return item.value;
+}
+
+function selectAuthentication( selector ) {
+	 var value = selectedValue( selector );
+	 if( value == "local" ) {
+	 	showUserFields();
+	 } else if( value == "radius" ) {
+	 	showRadiusFields();
+	 } else if( value == "psk" ) {
+	 	showPSKFields();
+	 }
+}
+
+function validate() {
+	// allow any ASCII (0x20~0x7e) for system name/contact/location
+	return true;
+}
+// Define the validator object
+function validator() {
+	this.setField = setField;
+	this.check = check;
+	this.cross = cross;
+	this.standard = standard;
+	this.specific = specific;
+	this.validate = dovalidate
+}
+
+// check the field using whatever the specific method is
+// and mark the field with a check or cross accordingly.
+function dovalidate( field ) {
+	if( this.specific( field ) ) {
+		check( field );
+		field.valid = true;
+		setFormState( formValid() );
+	} else {
+		cross( field );
+		field.valid = false;
+		setFormState( formValid() );
+	}
+}
+
+function formValid() {
+	formElements = getMainForm().elements;
+	for( var i = 0; i &lt; formElements.length; i++ ) {
+		if( !formElements[i].valid )
+			return false;
+	}
+	return true;
+}
+
+function setFormState( valid ) {
+	if( valid ) {
+		document.forms["basic_setup"].elements["update_settings"].disabled = false;
+		document.getElementById("updatehint").style.visibility = "hidden";
+	}
+	else {
+		document.forms["basic_setup"].elements["update_settings"].disabled = true;
+		document.getElementById("updatehint").style.visibility = "visible";
+	}
+}
+
+// apply the specific validation function for a given field, or the standard one if
+// there is none specified.
+function specific( field ) {
+	if( this[field.name] )
+		return this[field.name]( field );
+	else
+		return this.standard( field );
+}
+
+// basic validation function
+function standard( field ) {
+	return (field.value.length &gt; 0);
+}
+
+// method used to add validation functions for specific fields
+function setField( fieldname, method ) {
+	this[ fieldname ] = method;
+}
+
+// create the validator instance
+var v = new validator();
+
+// add a validator for the first admin field
+function v_adminpw( field ) {
+	return this.standard( field ) &amp;&amp; (field.value == formValue("adminpasswordconfirm"));
+}
+
+v.setField("adminpw", v_adminpw );
+
+function v_adminpw2( field ) {
+	return this.standard( field ) &amp;&amp; (field.value == formValue("adminpassword"));
+}
+
+v.setField("adminpw2", v_adminpw2 );
+
+function chkPasswd() {
+	var ff=document.forms["basic_setup"];
+	var BadChar=" \"$:&lt;&gt;'&amp;*";
+/* HAVE_MUTABLE_ADMIN_NAME start */
+	if (ff.username.value.length &lt; MIN_ADMIN_NAME_LEN) {
+		alert("The administrator name is empty. Please specify a name.");
+		ff.username.focus();
+		return;
+	}
+	if (ff.username.value.length &gt; MAX_ADMIN_NAME_LEN) {
+		alert("The administrator name must be an alphabet/digit string of upto 12 characters long.");
+		ff.username.focus();
+		return;
+	}
+	if (!isNaN(ff.username.value.charAt(0))) {
+		alert("The administrator name must begin with an alphabet.");
+		ff.username.focus();
+		return;
+	}
+	if (!isAlNum(ff.username.value)) {
+		alert("The administrator name must be an alphabet/digit string of upto 12 characters long.");
+		ff.username.focus();
+		return;
+	}
+/* HAVE_MUTABLE_ADMIN_NAME end */
+/* HAVE_ZERO_LENGTH_PASSWD start */
+		if (ff.adminpassword.value != ff.adminpasswordconfirm.value) {
+			alert("Passwords do not match.");
+			ff.adminpasswordconfirm.focus();
+			return false;
+		}
+		if (StringHasCharsInSet(ff.adminpassword.value, BadChar)) {
+			alert("The new password is not acceptable. Please do not include space(' ') and any of the characters within the parenthesis: (\"$:&lt;&gt;'&amp;*).");
+			ff.adminpassword.focus();
+			return false;
+		}
+/* HAVE_ZERO_LENGTH_PASSWD end */
+	ff.updatesettings.disabled = 0; // for CGI
+	if (validate()) ff.submit();
+}
+// --&gt;
+</script>
+
+
+<!--- ...basic_setup.html -->
+</head>
+
+<!--- horizontal_dropdown_navigation.html... -->
+
+
+<!--- ...horizontal_dropdown_navigation.html -->
+
+<!--- basic_setup.html... -->
+
+
+<!--- ...basic_setup.html -->
+<body onload="init();">
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="top-box">
+  <tbody><tr>
+    <td align="left" width="100%" valign="top">
+      <a target="_blank" href="http://www.allied-telesis.co.jp"><img border="0" src="logo.gif" alt="Allied Telesis K.K." /></a>
+    </td>
+
+    <td align="right" valign="top">
+      <form style="color:#997322; font-size: 12px; font-weight:bold; text-align:right; padding: 0px; margin: 0px;" method="post" name="navandlocale">
+        <table cellspacing="3">
+          <tbody><tr>
+            <td>
+              <table align="right" cellspacing="0" cellpadding="6" style="border: 1px solid #997322; background-color: #f9f4dd; filter: alpha(opacity='85'); -moz-opacity:0.85;">
+                <tbody><tr>
+                  <td align="right" nowrap="nowrap" style="font-size: 11px; text-transform: lowercase;">Navigation:</td>
+                  <td align="left" valign="bottom" colspan="99">
+                    <select onchange="createCookie('applook', this.value, 365); this.form.submit();" style="font-size: 11px; text-transform: lowercase;" size="1" name="look">
+                      <option style="font-size: 11px; text-transform: lowercase;" value="horizontal_tabbed_navigation.html">Horizontal Tabs</option>
+                      <option style="font-size: 11px; text-transform: lowercase;" value="vertical_tabbed_navigation.html">Vertical Tabs</option>
+                      <option style="font-size: 11px; text-transform: lowercase;" selected="selected" value="horizontal_dropdown_navigation.html">Dropdown Menu</option>
+                    </select>
+                  </td>
+  <!-- this menu will be hidden on release -->
+                  <td align="right" nowrap="nowrap" style="font-size: 11px; text-transform: lowercase;">Language:</td>
+                  <td align="left" valign="bottom" colspan="99">
+                    <select onchange="createCookie('locale', this.value, 365); this.form.submit();" style="font-size: 11px;" size="1" name="locale">
+                      <option style="font-size: 11px;" selected="selected" value="en us">English</option>
+                      <option style="font-size: 11px;" value="ja jp">Japanese</option>
+                    </select>
+                  </td>
+                  <!--<td align="right">
+                    <input type="submit" value="set" style="font-size: 11px;">
+                  </td>-->
+
+                </tr>
+              </tbody></table>
+            </td>
+            <td>
+<!--
+              <table cellspacing="0" cellpadding="6" style="border: 1px solid #997322;">
+                <tr>
+                  <td id="smallA" class="A" align="center" style="border: 1px solid #C5B67C; font-size: 8pt; cursor: pointer;" 
+                         onMouseOver="setOverColor(this);"
+                        onMouseOut="setOutColor(this);"
+                        onClick="setFontSizeByPercent( document.getElementById( 'content' ), 80, 'TD P INPUT SELECT OPTION' ); setClickedColor(this);">A</td>
+                  <td id="normalA" class="A" align="center" style="border: 1px solid #C5B67C; background-color:#D7D2BB; font-size: 10pt; cursor: pointer;"
+                        onMouseOver="setOverColor(this);"
+                        onMouseOut="setOutColor(this);"
+                        onClick="unsizeFonts( document.getElementById( 'content' ) ); setClickedColor(this);">A</td>
+                  <td id="mediumA" class="A" align="center" style="border: 1px solid #C5B67C; font-size: 14pt; cursor: pointer;"
+                        onMouseOver="setOverColor(this);"
+                        onMouseOut="setOutColor(this);"
+                        onClick="setFontSizeByPercent( document.getElementById( 'content' ), 110, 'TD P INPUT SELECT OPTION' ); setClickedColor(this);">A</td>
+                  <td id="largeA" class="A" align="center" style="border: 1px solid #C5B67C; font-size: 18pt; cursor: pointer;"
+                        onMouseOver="setOverColor(this);"
+                        onMouseOut="setOutColor(this);"
+                        onClick="setFontSizeByPercent( document.getElementById( 'content' ), 120, 'TD P INPUT SELECT OPTION' ); setClickedColor(this);">A</td>
+                </tr>
+              </table>
+-->
+            </td>
+          </tr>
+          <tr>
+<!--
+            <td align="right" valign="top" colspan="2" style="font-size: 11px; text-transform: lowercase;">Color Schemes:&nbsp;
+              <a id="scheme1" style="cursor: pointer; text-decoration:underline; color:#FF8040" onClick="setActiveStyleSheet('dss1'); highlightCurrentScheme('scheme1');">Scheme 1</a>,
+              <a id="scheme2" style="cursor: pointer; text-decoration:underline; color:#FF8040" onClick="setActiveStyleSheet('dss2'); highlightCurrentScheme('scheme2');">Scheme 2</a>,
+              <a id="scheme3" style="cursor: pointer; text-decoration:underline; color:#FF8040; font-weight: bold;" onClick="setActiveStyleSheet('dss3'); highlightCurrentScheme('scheme3');">Scheme 3</a>,
+              <a id="scheme4" style="cursor: pointer; text-decoration:underline; color:#FF8040" onClick="setActiveStyleSheet('dss4'); highlightCurrentScheme('scheme4');">Scheme 4</a>&nbsp;&nbsp;
+-->
+              <!-- button to show class names of elements for use with Mozilla/Firefox:
+              <input type="button" class="input-button-small" onClick="revealClassNames('TABLE TD INPUT');" value="show styles">-->
+<!--
+              </td>
+-->
+          </tr>
+          <tr>
+            <td align="right" valign="bottom" nowrap="nowrap" colspan="2" class="product-title">
+              AT-TQ2450
+            </td>
+          </tr>
+        </tbody></table>
+      </form>
+      <br /><a href="/admin.cgi?action=logout">Log Off</a>
+    </td>
+  </tr>
+</tbody></table>
+
+<!--- horizontal_dropdown_navigation.html... -->
+
+
+<table border="0" align="center" cellspacing="0" cellpadding="0" id="content-container">
+<tbody><tr>
+<td>
+<!-- content ... -->
+<table border="0" align="center" height="600" cellspacing="0" cellpadding="0" id="content">
+  <tbody><tr>
+    <td align="left" colspan="2">
+    <!-- content box ... -->
+    <table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0" class="content-box">
+  <tbody><tr>
+    <!-- navigator ... -->
+    <td class="navigator">
+    
+  <!-- nav generation ... -->
+  
+    
+  <link type="text/css" rel="stylesheet" href="menu.css" />
+  <style type="text/css">
+  &lt;!--
+    .nav-content-container {
+      border-width: 1px 1px 1px 1px;
+      border-style: solid solid solid solid;
+    }
+  --&gt;
+  </style>
+  <script language="javascript" type="text/javascript">
+  &lt;!--
+    var MENU_ITEMS = [['Basic Settings', '/admin.cgi?action=basic_settings', null, ],['Manage', '/admin.cgi?action=system', null, ['Ethernet Settings', '/admin.cgi?action=system'], ['Wireless Settings', '/admin.cgi?action=wireless'], ['Radio', '/admin.cgi?action=radio'], ['VAP', '/admin.cgi?action=vwn'], ['MAC Filtering                  &lt;!-- LVL7 / ATRD --&gt;', '/admin.cgi?action=mac_filtering'], ['Pre-Config Rogue AP', '/admin.cgi?action=ap_list'], ['Managed Access Point                   &lt;!-- LVL7 --&gt;', '/admin.cgi?action=managed_ap'], ],['Cluster', '/admin.cgi?action=access_points', null, ['Access Points', '/admin.cgi?action=access_points'], ['Sessions', '/admin.cgi?action=sessions'], ['Channel Management', '/admin.cgi?action=channel_planner'], ['Wireless Neighborhood', '/admin.cgi?action=cluster_neighborhood'], ],['Status', '/admin.cgi?action=interfaces', null, ['Interfaces', '/admin.cgi?action=interfaces'], ['Events', '/admin.cgi?action=events'], ['Transmit/Receive', '/admin.cgi?action=txrx'], ['Client Associations', '/admin.cgi?action=associations'], ['Neighboring Access Points', '/admin.cgi?action=aps'], ['Managed AP DHCP                          &lt;!-- LVL7 --&gt;', '/admin.cgi?action=map_dhcp'], ],['Services', '/admin.cgi?action=qos', null, ['QoS', '/admin.cgi?action=qos'], ['SNMP', '/admin.cgi?action=snmp'], ['LED', '/admin.cgi?action=led'], ['NTP', '/admin.cgi?action=time'], ],['Maintenance', '/admin.cgi?action=config_man', null, ['Configuration', '/admin.cgi?action=config_man'], ['Upgrade', '/admin.cgi?action=upgrade'], ],];
+  // --&gt;
+  </script>
+  <script type="text/javascript" language="javascript" src="menu.js"></script>
+  <script type="text/javascript" language="javascript" src="menu_tpl.js"></script>
+  <script type="text/javascript" language="javascript">
+  &lt;!--
+    new menu( MENU_ITEMS, MENU_POS );
+  // --&gt;
+  </script><div style="position: relative; width: 622px; height: 24px; background-color: transparent;" class=""></div><a onmousedown="A_MENUS[0].onmousedown(0);" onmouseover="A_MENUS[0].onmouseover(0);" onmouseout="A_MENUS[0].onmouseout(0);" onclick="return A_MENUS[0].onclick(0);" style="position: absolute; top: 112px; left: 8px; width: 100px; height: 22px; visibility: visible; line-height: 22px; border-left-style: solid; z-index: 1;" href="/admin.cgi?action=basic_settings" class="m0l0oout" id="e0_0o"><div class="m0l0iout" id="e0_0i">Basic Settings</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(1);" onmouseover="A_MENUS[0].onmouseover(1);" onmouseout="A_MENUS[0].onmouseout(1);" onclick="return A_MENUS[0].onclick(1);" style="position: absolute; top: 112px; left: 103px; width: 100px; height: 22px; visibility: visible; line-height: 22px; z-index: 1;" href="/admin.cgi?action=system" class="m0l0oout" id="e0_1o"><div class="m0l0iout" id="e0_1i">Manage</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(2);" onmouseover="A_MENUS[0].onmouseover(2);" onmouseout="A_MENUS[0].onmouseout(2);" onclick="return A_MENUS[0].onclick(2);" style="position: absolute; top: 135px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=system" class="m0l1oout" id="e0_2o"><div class="m0l1iout" id="e0_2i">Ethernet Settings</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(3);" onmouseover="A_MENUS[0].onmouseover(3);" onmouseout="A_MENUS[0].onmouseout(3);" onclick="return A_MENUS[0].onclick(3);" style="position: absolute; top: 157px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=wireless" class="m0l1oout" id="e0_3o"><div class="m0l1iout" id="e0_3i">Wireless Settings</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(4);" onmouseover="A_MENUS[0].onmouseover(4);" onmouseout="A_MENUS[0].onmouseout(4);" onclick="return A_MENUS[0].onclick(4);" style="position: absolute; top: 179px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=radio" class="m0l1oout" id="e0_4o"><div class="m0l1iout" id="e0_4i">Radio</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(5);" onmouseover="A_MENUS[0].onmouseover(5);" onmouseout="A_MENUS[0].onmouseout(5);" onclick="return A_MENUS[0].onclick(5);" style="position: absolute; top: 201px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=vwn" class="m0l1oout" id="e0_5o"><div class="m0l1iout" id="e0_5i">VAP</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(6);" onmouseover="A_MENUS[0].onmouseover(6);" onmouseout="A_MENUS[0].onmouseout(6);" onclick="return A_MENUS[0].onclick(6);" style="position: absolute; top: 223px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=mac_filtering" class="m0l1oout" id="e0_6o"><div class="m0l1iout" id="e0_6i">MAC Filtering                  <!-- LVL7 / ATRD --></div></a>
+<a onmousedown="A_MENUS[0].onmousedown(7);" onmouseover="A_MENUS[0].onmouseover(7);" onmouseout="A_MENUS[0].onmouseout(7);" onclick="return A_MENUS[0].onclick(7);" style="position: absolute; top: 245px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=ap_list" class="m0l1oout" id="e0_7o"><div class="m0l1iout" id="e0_7i">Pre-Config Rogue AP</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(8);" onmouseover="A_MENUS[0].onmouseover(8);" onmouseout="A_MENUS[0].onmouseout(8);" onclick="return A_MENUS[0].onclick(8);" style="position: absolute; top: 267px; left: 103px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  border-bottom-style: solid;  z-index: 2;" href="/admin.cgi?action=managed_ap" class="m0l1oout" id="e0_8o"><div class="m0l1iout" id="e0_8i">Managed Access Point                   <!-- LVL7 --></div></a>
+<a onmousedown="A_MENUS[0].onmousedown(9);" onmouseover="A_MENUS[0].onmouseover(9);" onmouseout="A_MENUS[0].onmouseout(9);" onclick="return A_MENUS[0].onclick(9);" style="position: absolute; top: 112px; left: 198px; width: 100px; height: 22px; visibility: visible; line-height: 22px; z-index: 1;" href="/admin.cgi?action=access_points" class="m0l0oout" id="e0_9o"><div class="m0l0iout" id="e0_9i">Cluster</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(10);" onmouseover="A_MENUS[0].onmouseover(10);" onmouseout="A_MENUS[0].onmouseout(10);" onclick="return A_MENUS[0].onclick(10);" style="position: absolute; top: 135px; left: 198px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=access_points" class="m0l1oout" id="e0_10o"><div class="m0l1iout" id="e0_10i">Access Points</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(11);" onmouseover="A_MENUS[0].onmouseover(11);" onmouseout="A_MENUS[0].onmouseout(11);" onclick="return A_MENUS[0].onclick(11);" style="position: absolute; top: 157px; left: 198px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=sessions" class="m0l1oout" id="e0_11o"><div class="m0l1iout" id="e0_11i">Sessions</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(12);" onmouseover="A_MENUS[0].onmouseover(12);" onmouseout="A_MENUS[0].onmouseout(12);" onclick="return A_MENUS[0].onclick(12);" style="position: absolute; top: 179px; left: 198px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=channel_planner" class="m0l1oout" id="e0_12o"><div class="m0l1iout" id="e0_12i">Channel Management</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(13);" onmouseover="A_MENUS[0].onmouseover(13);" onmouseout="A_MENUS[0].onmouseout(13);" onclick="return A_MENUS[0].onclick(13);" style="position: absolute; top: 201px; left: 198px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  border-bottom-style: solid;  z-index: 2;" href="/admin.cgi?action=cluster_neighborhood" class="m0l1oout" id="e0_13o"><div class="m0l1iout" id="e0_13i">Wireless Neighborhood</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(14);" onmouseover="A_MENUS[0].onmouseover(14);" onmouseout="A_MENUS[0].onmouseout(14);" onclick="return A_MENUS[0].onclick(14);" style="position: absolute; top: 112px; left: 293px; width: 100px; height: 22px; visibility: visible; line-height: 22px; z-index: 1;" href="/admin.cgi?action=interfaces" class="m0l0oout" id="e0_14o"><div class="m0l0iout" id="e0_14i">Status</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(15);" onmouseover="A_MENUS[0].onmouseover(15);" onmouseout="A_MENUS[0].onmouseout(15);" onclick="return A_MENUS[0].onclick(15);" style="position: absolute; top: 135px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=interfaces" class="m0l1oout" id="e0_15o"><div class="m0l1iout" id="e0_15i">Interfaces</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(16);" onmouseover="A_MENUS[0].onmouseover(16);" onmouseout="A_MENUS[0].onmouseout(16);" onclick="return A_MENUS[0].onclick(16);" style="position: absolute; top: 157px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=events" class="m0l1oout" id="e0_16o"><div class="m0l1iout" id="e0_16i">Events</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(17);" onmouseover="A_MENUS[0].onmouseover(17);" onmouseout="A_MENUS[0].onmouseout(17);" onclick="return A_MENUS[0].onclick(17);" style="position: absolute; top: 179px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=txrx" class="m0l1oout" id="e0_17o"><div class="m0l1iout" id="e0_17i">Transmit/Receive</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(18);" onmouseover="A_MENUS[0].onmouseover(18);" onmouseout="A_MENUS[0].onmouseout(18);" onclick="return A_MENUS[0].onclick(18);" style="position: absolute; top: 201px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=associations" class="m0l1oout" id="e0_18o"><div class="m0l1iout" id="e0_18i">Client Associations</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(19);" onmouseover="A_MENUS[0].onmouseover(19);" onmouseout="A_MENUS[0].onmouseout(19);" onclick="return A_MENUS[0].onclick(19);" style="position: absolute; top: 223px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=aps" class="m0l1oout" id="e0_19o"><div class="m0l1iout" id="e0_19i">Neighboring Access Points</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(20);" onmouseover="A_MENUS[0].onmouseover(20);" onmouseout="A_MENUS[0].onmouseout(20);" onclick="return A_MENUS[0].onclick(20);" style="position: absolute; top: 245px; left: 293px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  border-bottom-style: solid;  z-index: 2;" href="/admin.cgi?action=map_dhcp" class="m0l1oout" id="e0_20o"><div class="m0l1iout" id="e0_20i">Managed AP DHCP                          <!-- LVL7 --></div></a>
+<a onmousedown="A_MENUS[0].onmousedown(21);" onmouseover="A_MENUS[0].onmouseover(21);" onmouseout="A_MENUS[0].onmouseout(21);" onclick="return A_MENUS[0].onclick(21);" style="position: absolute; top: 112px; left: 388px; width: 100px; height: 22px; visibility: visible; line-height: 22px; z-index: 1;" href="/admin.cgi?action=qos" class="m0l0oout" id="e0_21o"><div class="m0l0iout" id="e0_21i">Services</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(22);" onmouseover="A_MENUS[0].onmouseover(22);" onmouseout="A_MENUS[0].onmouseout(22);" onclick="return A_MENUS[0].onclick(22);" style="position: absolute; top: 135px; left: 388px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=qos" class="m0l1oout" id="e0_22o"><div class="m0l1iout" id="e0_22i">QoS</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(23);" onmouseover="A_MENUS[0].onmouseover(23);" onmouseout="A_MENUS[0].onmouseout(23);" onclick="return A_MENUS[0].onclick(23);" style="position: absolute; top: 157px; left: 388px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=snmp" class="m0l1oout" id="e0_23o"><div class="m0l1iout" id="e0_23i">SNMP</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(24);" onmouseover="A_MENUS[0].onmouseover(24);" onmouseout="A_MENUS[0].onmouseout(24);" onclick="return A_MENUS[0].onclick(24);" style="position: absolute; top: 179px; left: 388px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=led" class="m0l1oout" id="e0_24o"><div class="m0l1iout" id="e0_24i">LED</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(25);" onmouseover="A_MENUS[0].onmouseover(25);" onmouseout="A_MENUS[0].onmouseout(25);" onclick="return A_MENUS[0].onclick(25);" style="position: absolute; top: 201px; left: 388px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  border-bottom-style: solid;  z-index: 2;" href="/admin.cgi?action=time" class="m0l1oout" id="e0_25o"><div class="m0l1iout" id="e0_25i">NTP</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(26);" onmouseover="A_MENUS[0].onmouseover(26);" onmouseout="A_MENUS[0].onmouseout(26);" onclick="return A_MENUS[0].onclick(26);" style="position: absolute; top: 112px; left: 483px; width: 100px; height: 22px; visibility: visible; line-height: 22px; border-right-style: solid; z-index: 1;" href="/admin.cgi?action=config_man" class="m0l0oout" id="e0_26o"><div class="m0l0iout" id="e0_26i">Maintenance</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(27);" onmouseover="A_MENUS[0].onmouseover(27);" onmouseout="A_MENUS[0].onmouseout(27);" onclick="return A_MENUS[0].onclick(27);" style="position: absolute; top: 135px; left: 483px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  z-index: 2;" href="/admin.cgi?action=config_man" class="m0l1oout" id="e0_27o"><div class="m0l1iout" id="e0_27i">Configuration</div></a>
+<a onmousedown="A_MENUS[0].onmousedown(28);" onmouseover="A_MENUS[0].onmouseover(28);" onmouseout="A_MENUS[0].onmouseout(28);" onclick="return A_MENUS[0].onclick(28);" style="position: absolute; top: 157px; left: 483px; width: 160px; height: 22px; visibility: hidden; line-height: 22px;  border-bottom-style: solid;  z-index: 2;" href="/admin.cgi?action=upgrade" class="m0l1oout" id="e0_28o"><div class="m0l1iout" id="e0_28i">Upgrade</div></a>
+
+
+  
+  <!-- ... nav generation -->
+
+    </td>
+    <!-- ... navigator -->
+  <!-- nav-content-container ... -->
+  
+  </tr>
+  <tr>
+  
+    <td width="100%" class="nav-content-container">
+    <!-- nav-content ... -->
+    <table border="0" width="100%" height="500" cellspacing="0" cellpadding="0" class="nav-content">
+      <tbody><tr>
+      <td align="left" width="100%" valign="top" class="nav-client-content">
+        <table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+        <td valign="top">
+          <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            
+        
+            
+              <tbody><tr><td align="left" width="100%" height="1" class="page-title" id="page-title">Provide basic settings</td></tr>
+              <tr><td> </td></tr>
+            
+        
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+                    
+                
+            
+        
+
+            <tr>
+              <td valign="top">
+
+
+<!--- basic_setup.html... -->
+
+<!-- this section include some informtive text regarding this page on a grey background  -->
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+      <td valign="top">
+        <!-- THIS IS WHERE THE MAIN CONTENT GOES -->
+        <form action="admin.cgi?action=basic_settings" method="post" name="basic_setup">
+          <!-- SECTION 1 -->
+          <br />
+          <table cellspacing="5">
+            <tbody><tr>
+              <td width="10" valign="middle"></td>
+              <td valign="middle" colspan="2" class="page-header1">Review Description of this Access Point ...</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td colspan="2">These fields show information specific to this access point.<br /><br /></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td class="label">IP Address:</td>
+              <td align="left" class="label">
+                10.3.1.6
+              </td>
+            </tr>
+            <tr> </tr>
+ 	    
+            <tr>
+              <td> </td>
+              <td class="label">MAC Address:</td>
+              <td align="left" class="label">
+                00:1A:EB:39:8A:C0
+              </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td class="label">Firmware Version:</td>
+              <td align="left" class="label">
+                1.1.6
+
+              </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td class="label">Build Number:</td>
+              <td align="left" class="label">
+                B01
+              </td>
+            </tr>
+<!-- HAVE_UPTIME -->
+
+            <tr>
+              <td> </td>
+              <td class="label">Time since system-up:</td>
+              <td align="left" class="label">
+                2 days, 04:27:02
+              </td>
+            </tr>
+
+<!-- HAVE_UPTIME -->
+	    <tr><td></td><td colspan="3">
+	        
+            </td></tr>
+            <tr>
+              <td> </td>
+	    <!-- Disable cluster
+              <td class="label">Location</td>
+              <td> <input class="input-text" onKeyUp="v.validate( this )" value="" name="location" type="text" size="26" maxlength="128">
+              </td>
+	    disable cluster end -->
+              <td><img src="blanksquare.gif" id="i_location" /></td>
+            </tr>
+            
+          </tbody></table>
+          <!-- SECTION 1 -->
+          
+          <div class="page-divider"></div>
+          <!-- SECTION 2 -->
+          <br />
+          <table cellspacing="5">
+            <tbody><tr>
+              <td width="10" valign="middle"></td>
+              <td valign="middle" colspan="2" class="page-header1">Provide Network Settings ...</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2">These settings apply to this access point.<br /> <br /> </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td colspan="3">
+<!-- HAVE_MUTABLE_ADMIN_NAME start -->
+                
+                
+<!-- HAVE_MUTABLE_ADMIN_NAME end -->
+                
+                
+                
+                
+<!-- HAVE_ZERO_LENGTH_PASSWD start -->
+                
+<!-- HAVE_ZERO_LENGTH_PASSWD end -->
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+	      <td colspan="3">
+	      <table>
+<!-- HAVE_MUTABLE_ADMIN_NAME start -->
+            <tbody><tr><td></td>
+              <td class="label">Administrator Name</td>
+              <td> <input type="text" value="llnoc" maxlength="12" name="username" onkeyup="v.validate( this )" class="input-text" />
+              </td>
+              <td><img src="blanksquare.gif" id="i_administratorname" /></td>
+            </tr>
+<!-- HAVE_MUTABLE_ADMIN_NAME end -->
+	      <tr><td></td>
+              <td class="label">Current Password</td>
+              <td><input type="password" value="" maxlength="32" name="currentpassword" />
+              </td>
+              <td><img src="blanksquare.gif" id="i_currentpassword" /></td>
+            </tr>
+            <tr> </tr>
+            <tr> </tr>
+            <tr><td></td>
+              <td class="label">New Password</td>
+              <td><input type="password" value="" maxlength="32" name="adminpassword" />
+              </td>
+              <td><img src="blanksquare.gif" id="i_adminpassword" /></td>
+            </tr>
+            <tr> </tr>
+            <tr> </tr>
+            <tr><td></td>
+              <td class="label">Confirm new password</td>
+              <td> <input type="password" value="" maxlength="32" name="adminpasswordconfirm" />
+              </td>
+              <td><img src="blanksquare.gif" id="i_adminpasswordconfirm" /></td>
+            </tr>
+            <tr><td></td>
+              <td><img src="blanksquare.gif" id="i_ssid" /></td>
+            </tr>
+			</tbody></table>
+			</td>
+          </tr></tbody></table>
+	  <!--
+          <div class="page-divider"></div>
+	  -->
+          <!-- SECTION 3 -->
+	  <!--
+          <br>
+          <table cellspacing=5>
+            <tr>
+              <td valign="middle" width="10"><img id="i_step3" src="3lit.gif"></td>
+              <td class="page-header1" valign="middle" colspan=2><span><b>???</b></span><span name='loc_err_' class='error' style='position: absolute;' onmouseover='this.style.zIndex = 100;' onmouseout='this.style.zIndex = 99;'>resource error: resource Messages.BSStep3Title not found in: Messages.hdf, Messages_en.hdf, Messages_en_us.hdf, Messages_en_us_ds.hdf.</span> ...</td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td colspan=2 class="smallcontent"> <br>
+              <span><b>???</b></span><span name='loc_err_' class='error' style='position: absolute;' onmouseover='this.style.zIndex = 100;' onmouseout='this.style.zIndex = 99;'>resource error: resource Messages.BSStep3Txt not found in: Messages.hdf, Messages_en.hdf, Messages_en_us.hdf, Messages_en_us_ds.hdf.</span>
+                <br> </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td colspan="2" class="label">New Access Points
+							  <select  name="clustermode">
+                  <option  value="auto">are configured automatically</option>
+                  <option selected value="ignore">are ignored</option>
+                </select>
+			  </td>
+			</tr>
+			<tr>
+              <td> </td>
+			  <td colspan="2" class="smallcontent">
+                
+			  </td>
+            </tr>
+	<tr id="iprangefields">
+		<td>
+		</td>
+
+		<td class="label">and use these IP addresses
+		</td>
+		<td nowrap>
+			<input class="input-text" type="text" size="3">.
+			<input class="input-text" type="text" size="3">.
+			<input class="input-text" type="text" size="3">.
+			<input class="input-text" type="text" size="3">
+			&nbsp;-&nbsp;
+			<input class="input-text" type="text" size="3">
+		</td>
+	</tr>
+          </table>
+	-->
+	
+
+          <div class="page-divider"></div>
+          <!-- SECTION 4 -->
+          <br />
+          <table cellspacing="5">
+            <tbody><tr>
+              <td width="10" valign="middle"></td>
+              <td valign="middle" colspan="2" class="page-header1">System Settings ...</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td class="label">System Name          <!-- LVL7 --></td>
+                <td class="section-cell"><input type="text" value="tq2450-13.wireless.yobi1" name="update.device.system.system-name" id="system_name" maxlength="64" size="32" class="input-text" /> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td class="label">System Contact    <!-- LVL7 --> </td>
+                <td class="section-cell"><input type="text" value="unknown" name="update.device.system.system-contact" id="system_contact" maxlength="64" size="32" class="input-text" /></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td class="label">System Location  <!-- LVL7 --> </td>
+                <td class="section-cell"><input type="text" value="unknown" name="update.device.system.system-location" id="system_location" maxlength="64" size="32" class="input-text" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2"><br /> Click “Update“ to save the new settings. <br /> </td>
+            </tr>
+            <tr> <td> </td>
+              <td align="left" colspan="2">
+                <!-- if there is an error, disable the submit button. -->
+                <input type="button" onclick="chkPasswd()" value="update" name="update_settings" class="input-submit" />
+                <input type="hidden" value="updated" name="updatesettings" />
+                <div style="visibility: hidden;" id="updatehint">(check for errors before trying to update.)</div>
+			  </td>
+            </tr>
+          </tbody></table>
+        </form>
+        <!-- END MAIN CONTENT SECTION -->
+      </td>
+      <!-- end of icons section -->
+    </tr>
+  </tbody></table>
+
+<!--- ...basic_setup.html -->
+
+
+            </td>
+            </tr>
+          </tbody></table>
+        </td>
+        <td width="4"> </td>
+        
+  
+  
+  
+      
+        
+          
+        
+        
+      
+  
+      
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+      
+  
+      
+          
+              
+          
+              
+          
+              
+          
+              
+          
+      
+  
+      
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+      
+  
+      
+          
+              
+          
+              
+          
+              
+          
+              
+          
+      
+  
+      
+          
+              
+          
+              
+          
+      
+  
+  <td align="left" width="20%" valign="top" class="page-help">
+    <img border="0" alt="page_help" src="page_help.gif" />
+    Provide the minimal set of configuration information needed to set up the access point and start wireless networking as described in the numbered steps on this page.<br /><br /><font color="#B70024"><b>Caution:</b></font><br /><b>If you do not have a DHCP server</b> on the network and do not plan to use one, the first thing you must do after bringing up the access point is change the Connection Type from DHCP to Static IP.<br /><br />To change the Connection Type, go to the <a href="admin.cgi?action=system">Ethernet (Wired) Settings</a> tab.<br /><br /><a onclick="window.open(' admin.cgi?action=basic_settings_help ', '_blank', 'dependent=yes,resizable=yes,toolbar=no,status=no,menubar=no,height=675,width=675,scrollbars=yes'); return false" href="#null">More</a> ...
+  </td>
+
+        </tr>
+      </tbody></table>
+      </td>
+      <!-- ... nav-client-content -->
+    </tr>
+    </tbody></table>
+    <!-- ... nav-content -->
+  </td>
+    <!-- ... nav-content-container -->
+  </tr>
+    <tr>
+    <td valign="top" colspan="2">
+    
+<!-- standard footer -->
+<br />
+<!--
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="9" style="line-height: 9px;">
+<td bgcolor="#c80818" width="51"></td>
+<td bgcolor="#F8E000" width="13"></td>
+<td bgcolor="#B8D8C0" width="127"></td>
+<td bgcolor="#486058" width="80"></td>
+<td bgcolor="#C80818" width="38"></td>
+<td bgcolor="#F8F8B8" width="40"></td>
+<td bgcolor="#486058" width="65"></td>
+<td bgcolor="#000000" width="29"></td>
+<td bgcolor="#F8E000" width="162"></td>
+<td bgcolor="#486058" width="73"></td>
+<td bgcolor="#B8D8C0" width="42"></td>
+<td bgcolor="#F8F8B8" width="41"></td>
+<td bgcolor="#C80818" width="67"></td>
+<td bgcolor="#000000" width="27"></td>
+</tr>
+</table>
+-->
+<table border="0" cellspacing="0" cellpadding="0" class="footer">
+  <tbody><tr>
+    <td class="footer-left">
+      
+    </td>
+    <td class="footer-right">
+        
+      Powered By <a href="http://www.broadcom.com"><b>Broadcom Corporation</b></a>
+        
+    </td>
+  </tr>
+</tbody></table>
+
+    </td>
+    </tr>
+</tbody></table>
+<!-- ... content box -->
+</td>
+</tr>
+</tbody></table>
+<!-- ... content -->
+</td>
+</tr>
+</tbody></table>
+<!-- ... content-container -->
+
+
+<!--- ...horizontal_dropdown_navigation.html -->
+
+
+<!-- errors ... -->
+
+<!-- ... errors -->
+
+
+<!-- debug ... -->
+
+<!-- ... debug  -->
+
+<script language="javascript" type="text/javascript">
+&lt;!--
+function highlightCurrentScheme() {
+  var ass = getActiveStyleSheet();
+  
+  document.getElementById('scheme1').style.fontWeight = ass == 'dss1' ? 'bold' : 'normal';
+  document.getElementById('scheme2').style.fontWeight = ass == 'dss2' ? 'bold' : 'normal';
+  document.getElementById('scheme3').style.fontWeight = ass == 'dss3' ? 'bold' : 'normal';
+  document.getElementById('scheme4').style.fontWeight = ass == 'dss4' ? 'bold' : 'normal';
+}
+//addOnLoadHandler(highlightCurrentScheme); // given that there are calls to addOnLoadHandler prior to body,
+                                          // it is important that there's at least one after so that the
+                                          // internal onload handler is not overwritten.
+// --&gt;
+</script>
+
+
+
+
+
+
+</body></html>
+<!-- 1.341:0 -->
