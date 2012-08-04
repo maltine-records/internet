@@ -1,0 +1,483 @@
+スクリプトは 2012年08月04日 09時20分11秒
+ に開始しました]0;takano32@llnoc: ~takano32@llnoc:~$ 
+]0;takano32@llnoc: ~takano32@llnoc:~$ 
+]0;takano32@llnoc: ~takano32@llnoc:~$ 
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.[K[K[K[Kcat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	irc
+127.0.1.1	llnoc.no32.tk
+10.3.1.1	wap
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+]0;takano32@llnoc: ~takano32@llnoc:~$ sudo vim /etc/hosts[Ksudo vim /etc/hosts[K[K[Kping 10.3.0.254 #IX0H2[K[K[K2025
+PING 10.3.0.254 (10.3.0.254) 56(84) bytes of data.
+64 bytes from 10.3.0.254: icmp_req=1 ttl=64 time=1.11 ms
+64 bytes from 10.3.0.254: icmp_req=2 ttl=64 time=0.483 ms
+^C
+--- 10.3.0.254 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.483/0.800/1.118/0.318 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.0.254 #IX2025[K[K[K[K[K[K[K1 #AX3640
+PING 10.3.0.1 (10.3.0.1) 56(84) bytes of data.
+64 bytes from 10.3.0.1: icmp_req=1 ttl=64 time=2.80 ms
+64 bytes from 10.3.0.1: icmp_req=2 ttl=64 time=1.15 ms
+^C
+--- 10.3.0.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 1.151/1.976/2.802/0.826 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.0.1 #AX3640[K[K[K[K[K[K[K02 [K[K.2 #Ali[Klide PoE
+PING 10.3.0.2 (10.3.0.2) 56(84) bytes of data.
+64 bytes from 10.3.0.2: icmp_req=1 ttl=64 time=2.13 ms
+^C
+--- 10.3.0.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 2.138/2.138/2.138/0.000 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.0.2 #Allide PoE[K[K[K[K3 #A PoE 2
+PING 10.3.0.3 (10.3.0.3) 56(84) bytes of data.
+^C
+--- 10.3.0.3 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2014ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.0.3 #A PoE 2[K[K[K[K[K[K[K[K[K[K[K[K2,[K.1 #vyatta1
+PING 10.3.2.1 (10.3.2.1) 56(84) bytes of data.
+64 bytes from 10.3.2.1: icmp_req=1 ttl=64 time=1.95 ms
+64 bytes from 10.3.2.1: icmp_req=2 ttl=64 time=0.796 ms
+^C
+--- 10.3.2.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.796/1.373/1.950/0.577 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.1 #vyatta1[K[K[K[K[K[K[K[K[K[K[K[K2.2 #netmgr
+PING 10.3.2.2 (10.3.2.2) 56(84) bytes of data.
+64 bytes from 10.3.2.2: icmp_req=1 ttl=64 time=1.50 ms
+64 bytes from 10.3.2.2: icmp_req=2 ttl=64 time=0.523 ms
+^C
+--- 10.3.2.2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.523/1.015/1.508/0.493 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.2 #netmgr[K[K[K[K[K[K[K[K[K[K.4 #esxi
+PING 10.3.2.4 (10.3.2.4) 56(84) bytes of data.
+64 bytes from 10.3.2.4: icmp_req=1 ttl=64 time=0.971 ms
+64 bytes from 10.3.2.4: icmp_req=2 ttl=64 time=0.257 ms
+^C
+--- 10.3.2.4 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.257/0.614/0.971/0.357 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.4 #esxi[K[K[K[K[K[K2.5 #vyatta2bak
+PING 10.3.2.5 (10.3.2.5) 56(84) bytes of data.
+64 bytes from 10.3.2.5: icmp_req=1 ttl=64 time=1.28 ms
+64 bytes from 10.3.2.5: icmp_req=2 ttl=64 time=0.448 ms
+^C
+--- 10.3.2.5 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.448/0.867/1.286/0.419 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.5 #vyatta2bak[K[K[K6 #netmgr2
+PING 10.3.2.6 (10.3.2.6) 56(84) bytes of data.
+^C
+--- 10.3.2.6 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2016ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.6 #netmgr2[C[C[C[C[C[C[C[C[C[K5 #vyatta2bak
+PING 10.3.2.5 (10.3.2.5) 56(84) bytes of data.
+64 bytes from 10.3.2.5: icmp_req=1 ttl=64 time=0.432 ms
+64 bytes from 10.3.2.5: icmp_req=2 ttl=64 time=0.347 ms
+^C
+--- 10.3.2.5 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 999ms
+rtt min/avg/max/mdev = 0.347/0.389/0.432/0.046 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.5 #vyatta2bak[C[1P #vyatta2bak6 #vyatta2bak[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K#netmgr-srv2
+PING 10.3.2.6 (10.3.2.6) 56(84) bytes of data.
+^C
+--- 10.3.2.6 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1008ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.6 #netmgr-srv2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K.7 #other-srv
+PING 10.3.2.7 (10.3.2.7) 56(84) bytes of data.
+64 bytes from 10.3.2.7: icmp_req=1 ttl=64 time=1.10 ms
+64 bytes from 10.3.2.7: icmp_req=2 ttl=64 time=0.431 ms
+^C
+--- 10.3.2.7 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.431/0.768/1.105/0.337 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.7 #other-srv[K[K[K[K[K[K[K[K[K[K[K[K10 #quiz
+PING 10.3.2.10 (10.3.2.10) 56(84) bytes of data.
+64 bytes from 10.3.2.10: icmp_req=1 ttl=64 time=0.514 ms
+^C
+--- 10.3.2.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.514/0.514/0.514/0.000 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.10 #quiz[K[K[K[K[K[K[K[K11 #snortby
+PING 10.3.2.11 (10.3.2.11) 56(84) bytes of data.
+From 10.3.2.14 icmp_seq=1 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=2 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=3 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=4 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=5 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=6 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=7 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=8 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=9 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=10 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=11 Destination Host Unreachable
+From 10.3.2.14 icmp_seq=12 Destination Host Unreachable
+^C
+--- 10.3.2.11 ping statistics ---
+15 packets transmitted, 0 received, +12 errors, 100% packet loss, time 13998ms
+pipe 4
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.11 #snortby[K[K[K[K[K[K[K[K[K[K[K8 #winxp
+PING 10.3.2.8 (10.3.2.8) 56(84) bytes of data.
+64 bytes from 10.3.2.8: icmp_req=1 ttl=128 time=0.979 ms
+64 bytes from 10.3.2.8: icmp_req=2 ttl=128 time=0.399 ms
+^C
+--- 10.3.2.8 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.399/0.689/0.979/0.290 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.8 #winxp[K[K[K[K[K[K[K[K20 #AT-W[KUWC
+PING 10.3.2.20 (10.3.2.20) 56(84) bytes of data.
+^C
+--- 10.3.2.20 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1007ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.20 #AT-UWC[K[K[K[K[K[K[K[K[K[K12 #nwmgmtsrv
+PING 10.3.2.12 (10.3.2.12) 56(84) bytes of data.
+64 bytes from 10.3.2.12: icmp_req=1 ttl=64 time=0.488 ms
+64 bytes from 10.3.2.12: icmp_req=2 ttl=64 time=0.327 ms
+^C
+--- 10.3.2.12 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 999ms
+rtt min/avg/max/mdev = 0.327/0.407/0.488/0.082 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.12 #nwmgmtsrv[K[K[K[K[K[K[K[K[K[K[K[K[K9 #IDS-mac
+PING 10.3.2.9 (10.3.2.9) 56(84) bytes of data.
+^C
+--- 10.3.2.9 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2014ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ # PoE2 / [C[C[C[C[C[C[C[C[Cping 10.3.2.9 #IDS-mac
+PING 10.3.2.9 (10.3.2.9) 56(84) bytes of data.
+^C
+--- 10.3.2.9 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 999ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ # PoE2 snorby IDS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@y[1@e[1@s[1P[1@t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d[1@a[1@t[1@e[1@ 
+2012年  8月  4日 土曜日 09:28:58 JST
+]0;takano32@llnoc: ~takano32@llnoc:~$ [4@(reverse-i-search)`':[CP': date #yet PoE2 snorby IDS[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[1@E[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pping 10.3.0.3 #A PoE 2[7P]0;takano32@llnoc: ~takano32@llnoc:~$]0;takano32@llnoc: ~takano32@llnoc:~$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+PING 10.3.0.3 (10.3.0.3) 56(84) bytes of data.
+^C
+--- 10.3.0.3 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2014ms
+
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.0.3 #A PoE 2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate #yet PoE2 snorby IDS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pping 10.3.2.9 #IDS-mac
+PING 10.3.2.9 (10.3.2.9) 56(84) bytes of data.
+64 bytes from 10.3.2.9: icmp_req=1 ttl=64 time=1.40 ms
+64 bytes from 10.3.2.9: icmp_req=2 ttl=64 time=0.715 ms
+64 bytes from 10.3.2.9: icmp_req=3 ttl=64 time=0.666 ms
+64 bytes from 10.3.2.9: icmp_req=4 ttl=64 time=0.762 ms
+^C
+--- 10.3.2.9 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 2999ms
+rtt min/avg/max/mdev = 0.666/0.887/1.407/0.303 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ ping 10.3.2.9 #IDS-mac0.3 #A PoE 22.9 #IDS-mac[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kping 10.3.2.9 #IDS-mac[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kping 10.3.2.9 #IDS-mac[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kping 10.3.2.9 #IDS-mac[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kping 10.3.2.9 #IDS-mac[K[C[C[C[C[4P[1@s[1@s[1@h[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@l[1@l[1@n[1@o[1@c[1@:[1P[1@@[C[C[C[C[C[C[C[C[C-A # IDS
+The authenticity of host '10.3.2.9 (10.3.2.9)' can't be established.
+RSA key fingerprint is 8e:b7:9e:47:49:d3:d3:c9:58:4c:b5:b6:a0:1f:60:91.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.3.2.9' (RSA) to the list of known hosts.
+Password:
+Last login: Sat Aug  4 09:30:50 2012 from 10.3.2.10
+[?1034hIDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ [H[2JIDS-mac:~ llnoc$ sc[K[Ktype ybo[Kbyobu
+-bash: type: byobu: not found
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ screen -x[Klist
+No Sockets found in /var/folders/pk/_kt7lx4d7wj9n03mygrv73w40000gp/T/.screen.
+
+IDS-mac:~ llnoc$ screen -list[K-S llnoc
+[?1049h[!p[?3;4l[4l>[4l[?1h=[0m(B[1;24r[H[2J[H[2Jbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ [12@(reverse-i-search)`': t': sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epocch -e http.request.full_uri >tshark.log 2>&1[As': sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epo[1@ch -e http.request.full_uri >[Ah': sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_ep[1@och -e http.request.full_uri >[Aa': sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_e[1@poch -e http.request.full_uri >[Abash-3.2$ sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.req[16Puest.full_uri >tshark.log 2>&1ark.log 2>&1[Abash-3.2$ [K
+[K[Abash-3.2$ sudo su - 
+Password:
+IDS-mac:~ root# 
+IDS-mac:~ root# 
+IDS-mac:~ root# 
+IDS-mac:~ root# logout
+bash-3.2$ sudo su - tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.reqquest.full_uri >tshark.log 2>&1
+^Cbash-3.2$ sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.reqquest.full_uri >tshark.log 2>&1[Asu - [K
+[K[A^Cbash-3.2$ sudsu - 
+IDS-mac:~ root# 
+IDS-mac:~ root# 
+IDS-mac:~ root# 
+IDS-mac:~ root# sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e h ttp.request.full_uri >tshark.log 2>&1[K
+sudo: tshark: command not found
+IDS-mac:~ root# /opt/local/
+Library/ etc/     lib/     man/     share/   
+bin/     include/ libexec/ sbin/    var/     
+IDS-mac:~ root# /opt/local/bisudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e htttp.request.full_uri [7m+flow[27m  [23;87Hhttp.req[14Ca [Asudo /tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e ht[1@t[A-mac:~ root# sudo / tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e [1@h[AS-mac:~ root# sudo / o tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e[1@ [AS-mac:~ root# sudo /op tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -[1@e[AS-mac:~ root# sudo /opt/ tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch[2@ -[A-mac:~ root# sudo /opt/local/ tshark -i en0 -R 'http.request' -T fields -e frame.time[6@_epoch[A:~ root# sudo /opt/local/b tshark -i en0 -R 'http.request' -T fields -e frame.tim[1@e[AS-mac:~ root# sudo /opt/local/bi tshark -i en0 -R 'http.request' -T fields -e frame.ti[1@m[AS-mac:~ root# sudo /opt/local/bin/ tshark -i en0 -R 'http.request' -T fields -e frame.[2@ti[A-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.t[P[ADS-mac:~ root# sudo /opt/local/bin/
+time_epoch -e http.request.full_uri 
+Capturing on en0
+1344040358.570100000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040360
+^C1 packet captured
+IDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.ttime_epoch -e http.request.full_uri >tshark.log 2>&1 
+[?1l>[24;1H
+[?1049l[detached]
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ 
+IDS-mac:~ llnoc$ ex[K[Kls
+Desktop/	Library/	Pictures/	tshark.log
+Documents/	Movies/		Public/		work/
+Downloads/	Music/		source/
+IDS-mac:~ llnoc$ screen -x
+[?1049h[!p[?3;4l[4l>[4l[?1h=[0m(B[1;24r[H[2J[H[2Jbash-3.2$ sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri >tshark.log 2>&1
+^Cbash-3.2$ sudsu -[67C IDS-mac:~ root#
+IDS-mac:~ root#
+IDS-mac:~ root#
+IDS-mac:~ root# sudo tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri
+sudo: tshark: command not found
+IDS-mac:~ root# /opt/local/
+Library/ etc/[5Clib/[5Cman/[5Cshare/
+bin/[5Cinclude/ libexec/ sbin/[4Cvar/
+IDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri
+Capturing on en0
+1344040358.570100000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040360
+^C1 packet captured
+IDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri >tshark.log 2>&1
+^CIDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.ttime_epoch -e http.request.full_uri >tshark.log 2>&1 .[1@.[1@l[1@l[1@d[1@e[1@c[1@a[1@d[1@e
+^CIDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.ttime_epoch -e http.request.full_uri >tshark.lldecade.log 2>&1 [AIDS-mac:~ root# 
+time_epoch -e http.request.full_uri >tshark.lldecade.log 2>&1 [1@>[1@ [AIDS-mac:~ root# sudo [H[H[2JIDS-mac:~ root# sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.ttime_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 [AIDS-mac:~ root# sudo wsudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.[1@t[AS-mac:~ root# whsudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame[1@.[AS-mac:~ root# whisudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e fram[1@e[AS-mac:~ root# whilsudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e fra[1@m[AS-mac:~ root# whilesudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e fr[1@a[AS-mac:~ root# while sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e f[1@r[AS-mac:~ root# while :sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e [1@f[AS-mac:~ root# while :;sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e[1@ [AS-mac:~ root# while :; sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -[1@e[AS-mac:~ root# while :; dsudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields [1@-[AS-mac:~ root# while :; dosudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields[1@ [AS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T field[1@s[AS-mac:~ root# while :; do 
+ds -e frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 e done;[1@; done;h  
+[?1l>[24;1H
+[?1049l[detached]
+IDS-mac:~ llnoc$ screen -x[Kscreen -x
+[?1049h[!p[?3;4l[4l>[4l[?1h=[0m(B[1;24r[H[2J[H[2JIDS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done
+^C^P^C^\^\^\
+
+
+
+
+
+^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^\Quit: 3
+^C^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\[H[2Jbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ps 
+  PID TTY           TIME CMD
+  248 ttys000    0:00.01 -bash
+  363 ttys001    0:00.02 -bash
+  521 ttys001    0:00.00 screen -x
+  479 ttys002    0:00.01 bash
+  591 ttys003    0:00.01 bash
+bash-3.2$ [H[2JIDS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done
+^C^P^C^\^\^\[6B^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^\Quit: 3
+^C^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^A[H[2Jbash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ psba
+PID TTY[11CTIME CMD  
+248 ttys000[4C0:00.01 -bash  
+363 ttys001[4C0:00.02 -bash  
+521 ttys001[4C0:00.00 screen -x  
+479 ttys002[4C0:00.01 bash  
+591 ttys003[4C0:00.01 bash
+bash-3.2$ ps auxfff[K[K[Kf | g[Klv
+bash: lv: command not found
+ps: illegal option -- f
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+          [-u]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
+       ps [-L]
+bash-3.2$ ps auxf | lv[K[Kf | [K[K[Kexit
+[H[2JIDS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done
+^C^P^C^\^\^\[6B^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^\Quit: 3
+^C^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^A^C^C^C
+
+^C
+^C^C
+^C
+^C^C^C^\^C^C^\^\^C^C^\^\^\^C^C^\^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^C^\^C^\^\^C^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^C^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\[5B[7mNo other window.[27m                    [19;54H
+
+
+
+
+
+
+
+
+^C^C^C^C
+
+[7mNo other window.[27m                    [H[2Jbash-3.2$ [H[2J
+
+^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^\Quit: 3
+^C^\^C^\^C^\^\^C^\^\^C^\^C^\^C^\^C^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^\^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^\^C^\^C^\^\^C^\^C^\^\^C^\^C^\^C^\^A^C^C^C
+
+^C
+^C^C
+^C
+^C^C^C^\^C^C^\^\^C^C^\^\^\^C^C^\^\^C^\^C^\^C^\^C^\^C^\^C^C^\^\^C^C^\^C^\^\^C^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\^C^C^\^C^\^C^C^\^C^\^\^C^\^C^\^C^\[9B^C^C^C^C
+
+
+
+[7mReally kill this window [y/n][27m[K                                                                                       [H[2Jbash-3.2$ [23B[7mWindow 0 (bash) killed.[27m                           [1;11H
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ exit
+[?1l>[24;1H
+[?1049l[screen is terminating]
+IDS-mac:~ llnoc$ screen -x[KS llno[K[K[K[Ktshark
+[?1049h[!p[?3;4l[4l>[4l[?1h=[0m(B[1;24r[H[2J[H[2Jbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ sudo su - 
+IDS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fiel ds -e frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done[AIDS-mac:~ root# while :; do sudo /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e [5P[ADS-mac:~ root# while :; do /opt/loca
+ frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done[1@ [P[AIDS-mac:~ root# [K
+[K[AIDS-mac:~ root# cat tshark.lldecade.log 
+Capturing on en0
+0 packets captured
+Capturing on en0
+1 packet captured
+1344040414.582882000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040416
+Capturing on en0
+0 packets captured
+Capturing on en0
+tshark: Child dumpcap process died: Interrupted
+0 packets captured
+Capturing on en0
+Capturing on en0
+2 packets captured
+1344040462.461343000[4Chttp://www.msftncsi.com/ncsi.txt
+1344040470.174702000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040471
+Capturing on en0
+0 packets captured
+Capturing on en0
+tshark: Child dumpcap process died: Interrupted
+0 packets captured
+Capturing on en0
+20 packets captured
+1344040495.376285000[4Chttp://whatsmyip.islayer.com/
+1344040496.691586000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwcD4U%3D
+1344040498.717593000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwaexk%3D
+1344040499.857317000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwaexk%3D
+1344040501.366993000[4Chttp://api.webrep.avast.com/v1/update
+1344040501.461202000[4Chttp://www.google.co.jp/
+1344040501.609218000[4Chttp://www.google.co.jp/logos/2012/pole_vault-2012-sr.png
+1344040501.633137000[4Chttp://api.webrep.avast.com/v2/rating
+1344040501.651954000[4Chttp://www.google.co.jp/xjs/_/js/s/s,st,anim,jsa,c,sb,hv,wta,cr,cdos,pj,tbpr,tbui,rsn,ob,mb,lc,du,ada,bihu,lu,m,nvm,shb,tng,hsm,j,p,pcc,csitl/rt=j/ver=QsTQY_7sUEk.en_US./d=1/rs=AItRSTNkKwGvF0NP5fmSD7zm_JlIAavc6A
+1344040501.808876000[4Chttp://www.google.co.jp/images/icons/product/chrome-48.png
+1344040501.833875000[4Chttp://ap.ff.avast.com/P/QTFFQzUwNzAtM0ZFQS0xMDY5LUEyREQtQzdFQTJCMzAzMENE
+1344040501.850444000[4Chttp://www.google.co.jp/logos/2012/pole_vault-2012-hp.jpg
+1344040501.956316000[4Chttp://api.webrep.avast.com/v2/rating/google.co.jp
+1344040502.110875000[4Chttp://www.google.co.jp/extern_chrome/457e6e507687b770.js
+1344040502.140037000[4Chttp://www.google.co.jp/images/swxa.gif
+1344040502.393683000[4Chttp://www.google.com/textinputassistant/tia.png
+1344040502.415404000[4Chttp://www.google.co.jp/images/nav_logo114.png
+1344040502.415801000[4Chttp://www.google.co.jp/csi?v=3&s=webhp&action=&e=17259,37102,39523,39596,39757,39813,39836,39876,39925,39978,40297,40485,4000009,4000035,4000036&ei=N24cUIegDorhmAXgzIHYCQ&imc=3&imn=3&imp=3&rt=xjsls.55,prt.61,xjses.358,xjsee.454,xjs.578,ol.859,iml.598,wsrt.661,cst.6,dnst.137,rqst.94,rspt.24
+1344040502.418046000[4Chttp://www.google.co.jp/favicon.ico
+1344040502.784613000[4Chttp://ssl.gstatic.com/gb/js/sem_20274d81add4f21f9f6be6beb53336cd.js
+Capturing on en0
+IDS-mac:~ root# while :; do /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e  frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done[AIDS-mac:~ root# [K
+[K[AIDS-mac:~ root# ls
+.DS_Store[7C[8CDesktop [8C[8CMusic
+.forward[8C[8CDocuments[7C[8CPictures
+.lesshst[8C[8CDownloads[7C[8CPublic
+.sh_history[5C[8CLibrary [8C[8Ctshark.lldecade.log
+.viminfo[8C[8CMovies  [8C[8Ctshark.log
+IDS-mac:~ root# while :; do /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e  frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1; done[1@ [1@&[1@&[1@ [1@s[1@l[1@e[1@e[1@p[1@ 3; done [Aframe.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 && sleep 3
+
+^C^C
+IDS-mac:~ root# 
+IDS-mac:~ root# while :; do /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e  frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 && sleep 3; done [A[AIDS-mac:~ root# [K
+[K
+[K[A[AIDS-mac:~ root# cat tshark.lldecade.log 
+Capturing on en0
+0 packets captured
+Capturing on en0
+1 packet captured
+1344040414.582882000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040416
+Capturing on en0
+0 packets captured
+Capturing on en0
+tshark: Child dumpcap process died: Interrupted
+0 packets captured
+Capturing on en0
+Capturing on en0
+2 packets captured
+1344040462.461343000[4Chttp://www.msftncsi.com/ncsi.txt
+1344040470.174702000[4Chttp://notify2.dropbox.com/subscribe?host_int=160045474&ns_map=15039460_13198449540068,7938214_68727414950,101080230_98885328038,104959335_73119403367,87384200_189065945224,144645453_8706043354445,682863_6043790864110218095,2557808_5487260684207458160,2492753_5630276188856781137,2662937_5435806920166908441,15644751_5862646003791&ts=1344040471
+Capturing on en0
+0 packets captured
+Capturing on en0
+tshark: Child dumpcap process died: Interrupted
+0 packets captured
+Capturing on en0
+20 packets captured
+1344040495.376285000[4Chttp://whatsmyip.islayer.com/
+1344040496.691586000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwcD4U%3D
+1344040498.717593000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwaexk%3D
+1344040499.857317000[4Chttp://ocsp.entrust.net/MEUwQzBBMD8wPTAJBgUrDgMCGgUABBTYqntZF2XfWd4vuxzYev4PhVs0zQQUHvGriQb4SQ8BM3fuFHruGXyTKE0CBEwaexk%3D
+1344040501.366993000[4Chttp://api.webrep.avast.com/v1/update
+1344040501.461202000[4Chttp://www.google.co.jp/
+1344040501.609218000[4Chttp://www.google.co.jp/logos/2012/pole_vault-2012-sr.png
+1344040501.633137000[4Chttp://api.webrep.avast.com/v2/rating
+1344040501.651954000[4Chttp://www.google.co.jp/xjs/_/js/s/s,st,anim,jsa,c,sb,hv,wta,cr,cdos,pj,tbpr,tbui,rsn,ob,mb,lc,du,ada,bihu,lu,m,nvm,shb,tng,hsm,j,p,pcc,csitl/rt=j/ver=QsTQY_7sUEk.en_US./d=1/rs=AItRSTNkKwGvF0NP5fmSD7zm_JlIAavc6A
+1344040501.808876000[4Chttp://www.google.co.jp/images/icons/product/chrome-48.png
+1344040501.833875000[4Chttp://ap.ff.avast.com/P/QTFFQzUwNzAtM0ZFQS0xMDY5LUEyREQtQzdFQTJCMzAzMENE
+1344040501.850444000[4Chttp://www.google.co.jp/logos/2012/pole_vault-2012-hp.jpg
+1344040501.956316000[4Chttp://api.webrep.avast.com/v2/rating/google.co.jp
+1344040502.110875000[4Chttp://www.google.co.jp/extern_chrome/457e6e507687b770.js
+1344040502.140037000[4Chttp://www.google.co.jp/images/swxa.gif
+1344040502.393683000[4Chttp://www.google.com/textinputassistant/tia.png
+1344040502.415404000[4Chttp://www.google.co.jp/images/nav_logo114.png
+1344040502.415801000[4Chttp://www.google.co.jp/csi?v=3&s=webhp&action=&e=17259,37102,39523,39596,39757,39813,39836,39876,39925,39978,40297,40485,4000009,4000035,4000036&ei=N24cUIegDorhmAXgzIHYCQ&imc=3&imn=3&imp=3&rt=xjsls.55,prt.61,xjses.358,xjsee.454,xjs.578,ol.859,iml.598,wsrt.661,cst.6,dnst.137,rqst.94,rspt.24
+1344040502.418046000[4Chttp://www.google.co.jp/favicon.ico
+1344040502.784613000[4Chttp://ssl.gstatic.com/gb/js/sem_20274d81add4f21f9f6be6beb53336cd.js
+Capturing on en0
+Capturing on en0
+1 packet captured
+1344040609.084218000[4Chttp://www.hi-ho.ne.jp/cgi-bin/user/yoshihiro_e/ip_check.cgi
+IDS-mac:~ root# cat tshark.lldecade.log IDS-mac:~ root# while :; do /opt/local/bin/tshark -i en0 -R 'http.request' -T fields -e  frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 && sleep 3; done [A frame.time_epoch -e http.request.full_uri >> tshark.lldecade.log 2>&1 && sleep 3; don[Ke
+
+
+
+[?1l>[24;1H
+[?1049l[detached]
+IDS-mac:~ llnoc$ exit[Kscreen -list
+There is a screen on:
+	662.tshark	(Detached)
+1 Socket in /var/folders/pk/_kt7lx4d7wj9n03mygrv73w40000gp/T/.screen.
+
+IDS-mac:~ llnoc$ logout
+Connection to 10.3.2.9 closed.
+]0;takano32@llnoc: ~takano32@llnoc:~$ ssh llnoc@10.3.2.9 -A # IDS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kssh llnoc@10.3.2.9 -A # IDS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[4@(reverse-i-search)`':[CP': ping 10.3.0.3 #A PoE 2[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P]0;takano32@llnoc: ~takano32@llnoc:~$]0;takano32@llnoc: ~takano32@llnoc:~$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+PING 10.3.0.3 (10.3.0.3) 56(84) bytes of data.
+64 bytes from 10.3.0.3: icmp_req=1 ttl=64 time=2.03 ms
+64 bytes from 10.3.0.3: icmp_req=2 ttl=64 time=0.630 ms
+^C
+--- 10.3.0.3 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.630/1.331/2.032/0.701 ms
+]0;takano32@llnoc: ~takano32@llnoc:~$ [4@(reverse-i-search)`':[Cs': ssh llnoc@10.3.2.9 -A # IDS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pn': date #yet PoE2 snorby[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@r[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pping 10.3.2.11 #snortby[8P]0;takano32@llnoc: ~takano32@llnoc:~$]0;takano32@llnoc: ~takano32@llnoc:~$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+PING 10.3.2.11 (10.3.2.11) 56(84) bytes of data.
+64 bytes from 10.3.2.11: icmp_req=1 ttl=64 time=1068 ms
+64 bytes from 10.3.2.11: icmp_req=2 ttl=64 time=68.4 ms
+64 bytes from 10.3.2.11: icmp_req=3 ttl=64 time=92.7 ms
+^C
+--- 10.3.2.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 68.413/409.8
