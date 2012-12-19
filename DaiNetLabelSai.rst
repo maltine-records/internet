@@ -97,12 +97,12 @@ WOMBスタッフ用WiFiが存在するので、当日はこれを停波させて
 平面図とAP設置計画と配線計画
 
 `平面図の拡大
-<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_.
+<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
 
 .. image:: http://cache.gyazo.com/b1cf43a9a30a864f27005451c36e40e6.png
 
 `平面図の拡大
-<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_.
+<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
 
 
 
@@ -241,6 +241,41 @@ WiFi
 - SSID とかパスを書いた大きい張り紙を多めにつくる。前回 A4 だと小さかった感じ
 
 
+
+想定端末数
+==========
+
+1F WOMB LOUNGE
+  100
+
+
+2Fメインフロア
+  160 (+ リピータ親)
+
+
+3F 楽屋
+  10
+
+
+4Fラウンジ(リピータ子)
+  50
+
+
+エントランス方面
+  80
+  
+  入口方面は重要度高め
+
+
+会場の回線
+----------
+
+- フレッツ光 100M
+
+- プロバイダのアカウントを WOMB から借りて IX2015 に設定できるか
+
+  - NG だとしてもフレッツとかなら今月だけ何か契約すればOK? or あまってる人いる?
+
 WOMB's Network
 --------------
 
@@ -273,40 +308,6 @@ WOMBに既に入っている無線(Buffalo等)をいったん全て切る。終�
 
 
 
-- プロバイダのアカウントを WOMB から借りて IX2015 に設定できるか
-
-  - NG だとしてもフレッツとかなら今月だけ何か契約すればOK? or あまってる人いる?
-
-
-想定端末数
-==========
-
-1F WOMB LOUNGE
-  100
-
-
-2Fメインフロア
-  160 (+ リピータ親)
-
-
-3F 楽屋
-  10
-
-
-4Fラウンジ(リピータ子)
-  50
-
-
-エントランス方面
-  80
-  
-  入口方面は重要度高め
-
-
-会場の回線
-----------
-
-- フレッツ光 100M
 
 
 その他
