@@ -172,7 +172,7 @@ tinbotu
 
   - 24 ポート L2SW / 100Base-TX / Cisco PoE (not 802.3af)
 
-- Cisco AIR-AP1242AG-P-K9 * 8台
+- Cisco AIR-AP1242AG-P-K9 * 7台
 
 - Cisco AIR-AP1131AG-P-K9 * 2台
 
@@ -227,7 +227,10 @@ WiFi
 
 - SSID
 
-  - Netlabel (2.4GHz)
+  - netlabel (2.4GHz)
+
+  - netlabel-high (5GHz)
+
 
 - 暗号化
 
