@@ -272,6 +272,11 @@ WiFi
 
 - SSID とかパスを書いた大きい張り紙を多めにつくる。前回 A4 だと小さかった感じ
 
+  .. image:: http://cache.gyazo.com/6065e5399c1f3d5050aa6bced1eae422.png
+
+  `インターネットあります セブンネットプリント 15517821 (A3)
+  <https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
+
 
 
 想定端末数
