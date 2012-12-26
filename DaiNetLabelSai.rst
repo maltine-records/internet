@@ -274,7 +274,7 @@ WiFi
 
   .. image:: http://cache.gyazo.com/6065e5399c1f3d5050aa6bced1eae422.png
 
-  `インターネットあります セブンネットプリント 15517821 (A3)
+  `インターネットあります(PDF) セブンネットプリントでも OK 15517821 (A3) 
   <https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
 
 
