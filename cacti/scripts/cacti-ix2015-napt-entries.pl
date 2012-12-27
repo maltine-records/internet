@@ -45,7 +45,7 @@ if(@ARGV < 3){
 
 
 my $telnet = Net::Telnet->new(
-  Timeout   => 2,
+  Timeout   => 7,
   Prompt    => '/(?m:^[\w.-]+\s?(?:\((dhcp-config|config)[^\)]*\))?\s?[\$#>]\s?(?:\(enable\))?\s*$)/',
 #  Input_log => "./input.txt",
 );
