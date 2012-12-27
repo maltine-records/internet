@@ -199,6 +199,21 @@ APなど
     - リピータを使用すると trunk できない
 
 
+- SSID
+
+  - netlabel (2.4GHz)
+
+    - Pass: netlabel
+
+  - netlabel-high (5GHz)
+
+    - Pass: netlabel
+
+
+- 暗号化
+
+  - Authentication open, WPA2-PSK AES-CCMP
+
 
 準備済のもの
 ==============
@@ -287,20 +302,6 @@ WiFi
   - テーブルと椅子があるらしい(tomad)けど実物を見ていない
 
 
-- SSID
-
-  - netlabel (2.4GHz)
-
-    - Pass: netlabel
-
-  - netlabel-high (5GHz)
-
-    - Pass: netlabel
-
-
-- 暗号化
-
-  - Authentication open, WPA2-PSK AES-CCMP
 
 
 - SSID とかパスを書いた大きい張り紙を多めにつくる。前回 A4 だと小さかった感じ
