@@ -313,6 +313,7 @@ WiFi
 
   `インターネットあります(PDF) セブンネットプリントでも OK 15517821 (A3) 
   <https://github.com/maltine-records/internet/raw/master/InternetArimasu_1.pdf>`_
+　　>印刷しました　@tks
 
 
 
