@@ -5,7 +5,7 @@
 
 MACアドレスが入っているので生のログは暗号化しています。
 
-openssl があれば戻せます。see Makefile
+openssl があってパスフレーズを知っていれば戻せます。see Makefile
 
 
 ユニークMACアドレス集計により圧倒的な Apple 帝国が判明
