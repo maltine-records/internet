@@ -9,8 +9,6 @@
 
 =cut
 
-package searchMacOUI;
-
 use strict;
 use warnings;
 use Carp;
@@ -25,17 +23,18 @@ my %vendors=();
 foreach (@content)
 {
   chomp;
-  my $mac = $_;
+  my $macoui = $_;
 
-  my $macoui = $mac;
-  if($macoui =~ /^[0-9a-fA-F]{12,}/){
+  if($macoui =~ /^[0-9a-fA-F]{12,}/)
+  {
      $macoui =~ s/\.//g;
      $macoui =~ s/.{2}/$&:/g;
      chop($macoui);
+
+     my $vendor = (Net::MAC::Vendor::lookup($macoui))[0][0]; 
+     printf("%s (%s)\n", $macoui, $vendor);
+     $vendors{$vendor}++;
   }
-  my $vendor = (Net::MAC::Vendor::lookup($macoui))[0][0]; 
-  printf("%s (%s)\n", $macoui, $vendor);
-  $vendors{$vendor}++;
 }
 
 foreach (sort keys %vendors){
