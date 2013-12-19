@@ -203,7 +203,9 @@ APなど
   
   - AP7 AIR-AP1242AG-P-K9 **172.25.0.17**
 
-  - AP7 AIR-AP1242AG-P-K9 **172.25.0.18**
+  - AP8 AIR-AP1242AG-P-K9 **172.25.0.18**
+
+  - AP9 AIR-AP1242AG-P-K9 **172.25.0.19** (予備)
 
   - 監視用PC **172.25.0.32**
 
@@ -231,23 +233,42 @@ tinbotu
 
 - IX2015
 
+  - CoreGW, DHCPv4Server, DNSProxy
+
 - Catalyst WS-C3524-PWR-XL
 
   - 24 ポート L2SW / 100Base-TX / Cisco PoE (not 802.3af)
 
-- Catalyst 2940
+- Catalyst WS-C2940-8TT-S * 2台
 
   - 8 ポート L2SW / 100Base-TX
 
 - Cisco AIR-AP1242AG-P-K9 * 9台
 
-- Cisco PoE パワーインジェクタ + AC * 3
+  - Cisco AIR-ANT2422DB-R(2.4G Antenna) * 18
 
-- UTP (LAN) ケーブル
+  - Cisco AIR-ANT5135D-R(5G Antenna) * 18
 
-- AC 延長とアドン変換
+- Cisco PoE パワーインジェクタ + AC * 4
 
-- 標準AC電源ケーブル * 6
+  - Cisco AIR-PWRINJ3= * 4
+
+  - Cisco AIR-PWR-B= * 4
+
+- 標準AC電源ケーブルとアドン変換 * 8
+
+- AC 延長タップ * 5
+
+- コンソールケーブルとUSBtoSerial
+
+- 監視PC (CF-T5)
+
+- パーマセル
+
+- 無線インカム * 2
+
+- UTP
+
 
 
 
@@ -260,7 +281,13 @@ maltine
 
   - 30m * 2
 
-  - 5m * 2
+  - 15m * 1
+
+  - 5m * 1
+
+  - 3m * 3
+
+  - 1m * 2
 
 
 
