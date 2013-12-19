@@ -116,7 +116,7 @@ http://www-shibuya.jp/common/pdf/about_floor.pdf
 
     - AP 6 ラウンジ下 (6/48)
 
-      - 下見できていない。現地を見て決める
+      - **下見できていない。現地を見て決める**
       
       1. 上階へ UTP ケーブルが出ており、そこに Buffalo AP が繋がっているとのこと。これを外して使用
       
