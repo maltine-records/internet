@@ -185,7 +185,9 @@ APなど
 
   - switch1 Catalyst C3524 **172.25.0.1**
 
-  - switch2 Catalyst C2940 **172.25.0.1**
+  - switch2 Catalyst C2940 **172.25.0.2**
+
+  - switch3 Catalyst C2940 **172.25.0.3**
 
   - AP1 AIR-AP1242AG-P-K9 **172.25.0.11**
   
