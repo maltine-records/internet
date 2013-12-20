@@ -307,8 +307,13 @@ maltine
 
 - SSID とかを書いた大きな張り紙を多めに作る
   
-  - 今作ってる
+.. image:: http://cache.gyazo.com/4bd9e3d7bb231a606570c3b8c308aee6.png
 
+ダウンロード(JPG) `インターネットあります(A)
+<https://github.com/maltine-records/internet/raw/master/yama_wifi_A.jpg>`_
+
+ダウンロード(JPG) `インターネットあります(B)
+<https://github.com/maltine-records/internet/raw/master/yama_wifi_B.jpg>`_
 
 
 
