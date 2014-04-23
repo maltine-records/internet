@@ -101,12 +101,12 @@ WOMBスタッフ用WiFiが存在するので、当日はこれを停波させて
 平面図とAP設置計画と配線計画
 
 `平面図の拡大
-<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
+<https://github.com/maltine-records/internet/raw/master/img/womb_floor_plan.pdf>`_
 
 .. image:: http://cache.gyazo.com/b1cf43a9a30a864f27005451c36e40e6.png
 
 `平面図の拡大
-<https://github.com/maltine-records/internet/raw/master/womb_floor_plan.pdf>`_
+<https://github.com/maltine-records/internet/raw/master/img/womb_floor_plan.pdf>`_
 
 
 
@@ -312,7 +312,7 @@ WiFi
   .. image:: http://cache.gyazo.com/6065e5399c1f3d5050aa6bced1eae422.png
 
   `インターネットあります(PDF) セブンネットプリントでも OK 15517821 (A3) 
-  <https://github.com/maltine-records/internet/raw/master/InternetArimasu_1.pdf>`_
+  <https://github.com/maltine-records/internet/raw/master/img/InternetArimasu_1.pdf>`_
 　　>印刷しました　@tks
 
 

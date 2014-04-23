@@ -144,12 +144,12 @@ http://www-shibuya.jp/common/pdf/about_floor.pdf
 平面図とAP設置計画と配線計画
 
 `平面図の拡大(PDF)
-<https://github.com/maltine-records/internet/raw/master/www_about_floor.pdf>`_
+<https://github.com/maltine-records/internet/raw/master/img/www_about_floor.pdf>`_
 
 .. image:: http://cache.gyazo.com/11bd42faee0bfd43cc15df899bbef0cd.png
 
 `平面図の拡大(PDF)
-<https://github.com/maltine-records/internet/raw/master/www_about_floor.pdf>`_
+<https://github.com/maltine-records/internet/raw/master/img/www_about_floor.pdf>`_
 
 
 
@@ -310,10 +310,10 @@ maltine
 .. image:: http://cache.gyazo.com/4bd9e3d7bb231a606570c3b8c308aee6.png
 
 ダウンロード(JPG) `インターネットあります(A)
-<https://github.com/maltine-records/internet/raw/master/yama_wifi_A.jpg>`_
+<https://github.com/maltine-records/internet/raw/master/img/yama_wifi_A.jpg>`_
 
 ダウンロード(JPG) `インターネットあります(B)
-<https://github.com/maltine-records/internet/raw/master/yama_wifi_B.jpg>`_
+<https://github.com/maltine-records/internet/raw/master/img/yama_wifi_B.jpg>`_
 
 
 
