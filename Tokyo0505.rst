@@ -135,9 +135,12 @@ http://www.liquidroom.net/access/
 `平面図の拡大(PDF)
 <https://github.com/maltine-records/internet/raw/master/img/tokyo0505_map3.pdf>`_
 
+
 .. image:: https://github.com/maltine-records/internet/raw/master/img/tokyo0505_map3_1.png
 
+
 .. image:: https://github.com/maltine-records/internet/raw/master/img/tokyo0505_map3_2.png
+
 
 `平面図の拡大(PDF)
 <https://github.com/maltine-records/internet/raw/master/img/tokyo0505_map3.pdf>`_
