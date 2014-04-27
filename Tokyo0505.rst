@@ -11,7 +11,7 @@ http://tokyo-0505.cs8.biz/
         ADV:3,300JPY, DOOR:3,800JPY 
         EBIS LIQUIDROOM  http://www.liquidroom.net/
         東京都渋谷区東3-16-6 / TEL: 03.5464.0800
-        ※未成年入場可!!!
+        ※未成年入場*可能*
         ※再入場不可 
 
 
@@ -70,7 +70,7 @@ http://www.liquidroom.net/access/
 配線概念
 ========
 
-2F 第3楽屋に IX2025 を設置(コアルータ)。
+2F 第3楽屋に IX2025 を設置(コアルータ)。FE1/0に 1F, 2F, AP09 を接続。これらは port protect されない。
 
 
 - 1F メインステージ 舞台下手 
@@ -198,7 +198,7 @@ tinbotu
 
   - CoreGW, DHCPv4Server, DNSProxy
 
-- Alaxala AX1230P
+- Alaxala AX1230S-24P2CA
   
   - 24 ポート L2SW / 100BASE-TX / 802.3af PoE (170W)
 
@@ -208,13 +208,15 @@ tinbotu
 
 - Catalyst WS-C2940-8TT-S * 1
 
-  - 8 ポート L2SW / 100Base-TX
+  - 9 ポート L2SW / 100Base-TX
 
-- Cisco AIR-AP1242AG-P-K9 * 9台
+- Cisco AIR-AP1242AG-P-K9 * 14台
 
-  - Cisco AIR-ANT2422DB-R(2.4G Antenna) * 18
+  - Cisco AIR-ANT2422DB-R(2.4G Antenna) * 28
 
-  - Cisco AIR-ANT5135D-R(5G Antenna) * 18
+  - Cisco AIR-ANT5135D-R(5G Antenna) * 28
+
+- Cisco AIR-AP1131AG-P-K9 * 2 台
 
 - Cisco PoE パワーインジェクタ + AC * 4
 
@@ -228,7 +230,9 @@ tinbotu
 
 - RJ45 コンソールケーブルとUSBtoSerial
 
-- 監視PC (CF-T5)
+- DSUB9 コンソールケーブル
+
+- 監視PC (MacBookPro)
 
 - パーマセル
 
@@ -240,8 +244,9 @@ tinbotu
 買わないといけないもの
 ======================
 
-- UTP, RJ45
+- UTP 200m
 
+- RJ45
 
 
 前回の反省をふまえて
