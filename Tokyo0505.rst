@@ -265,6 +265,7 @@ tinbotu
 ダウンロード(JPG) `FREE WiFi
 <https://github.com/maltine-records/internet/raw/master/img/tokyowifi02.jpg>`_
 
+セブンネットプリント 19870959
 
 
 想定端末数
