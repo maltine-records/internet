@@ -260,13 +260,10 @@ tinbotu
 
 - SSID とかを書いた大きな張り紙を多めに作る
   
-.. image:: http://cache.gyazo.com/4bd9e3d7bb231a606570c3b8c308aee6.png
+.. image:: http://cache.gyazo.com/b34c21567384d4c152aa4fe6c3ac2001.png
 
-ダウンロード(JPG) `インターネットあります(A)
-<https://github.com/maltine-records/internet/raw/master/img/yama_wifi_A.jpg>`_
-
-ダウンロード(JPG) `インターネットあります(B)
-<https://github.com/maltine-records/internet/raw/master/img/yama_wifi_B.jpg>`_
+ダウンロード(JPG) `FREE WiFi
+<https://github.com/maltine-records/internet/raw/master/img/tokyowifi02.jpg>`_
 
 
 
